@@ -68,6 +68,7 @@ def fetch_ct_articles_and_save(index_url, output_dir, source_label="中時"):
 
         full_url = "https://www.chinatimes.com" + raw_link if raw_link.startswith("/") else raw_link
         if full_url in done_urls:
+            
             print(f"   ⏩ 已處理過（URL 重複）")
             continue
 
@@ -101,6 +102,7 @@ def fetch_ct_articles_and_save(index_url, output_dir, source_label="中時"):
                 f.write(f"標題: {article.title}\n")
                 f.write(f"連結: {full_url}\n\n")
                 f.write(article.text)
+            append_done_url(done_file, full_url)
 
             append_done_url(done_file, full_url)
             print(f"   ✅ 已儲存：{filename}")

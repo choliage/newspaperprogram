@@ -81,11 +81,14 @@ def fetch_udn_articles_and_save(page_url, output_dir, source_label="聯合"):
 
             title = a.text.strip()
             link = "https://udn.com" + a['href']
-            final_url = get_final_url(link)
 
-            if final_url in done_urls:
-                print(f"   ⏩ 已處理過（URL 重複）")
+
+            if link in done_urls:
+                print(f"   ⏩ 預檢：已處理過（URL 重複），完全略過")
                 continue
+
+
+            final_url = get_final_url(link)
 
             print(f"  {i:02d}. 嘗試擷取文章：{title}")
             try:
@@ -109,7 +112,8 @@ def fetch_udn_articles_and_save(page_url, output_dir, source_label="聯合"):
                     f.write(f"標題: {article.title}\n")
                     f.write(f"連結: {final_url}\n\n")
                     f.write(article.text)
-                append_done_url(done_file, final_url)
+                append_done_url(done_file, link)   
+
                 print(f"   ✅ 已儲存：{filename}")
             except Exception as e:
                 print(f"   ❌ 擷取失敗: {e}")
