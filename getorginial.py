@@ -1,5 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
 
-reqget = requests.get("https://udn.com/news/cate/2/7225")
+reqget = requests.get("https://www.chinatimes.com/money/?chdtv")
 print(reqget.text)
