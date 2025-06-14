@@ -43,10 +43,25 @@ def create_driver():
 def sanitize_filename(title):
     return re.sub(r'[\\/:*?"<>|]', "_", title)[:50]
 
+
+from urllib.parse import urlparse
+
+def normalize_url(url):
+    try:
+        parsed = urlparse(url)
+        netloc = parsed.netloc.replace('www.', '').lower()
+        path = parsed.path.rstrip('/')
+        query = f"?{parsed.query}" if parsed.query else ''
+        return f"{netloc}{path}{query}"
+    except:
+        return url.strip().lower()
+
+
 def fetch_ct_articles_and_save(index_url, output_dir, source_label="中時"):
     subdir = os.path.join(output_dir, source_label)
     done_file = os.path.join(subdir, "done_urls.txt")
     done_urls = load_done_urls(done_file)
+    normalized_done_urls = set(normalize_url(url) for url in done_urls)
     os.makedirs(subdir, exist_ok=True)
 
     driver = create_driver()
@@ -67,9 +82,9 @@ def fetch_ct_articles_and_save(index_url, output_dir, source_label="中時"):
         raw_link = a['href'].strip()
 
         full_url = "https://www.chinatimes.com" + raw_link if raw_link.startswith("/") else raw_link
-        if full_url in done_urls:
-            
-            print(f"   ⏩ 已處理過（URL 重複）")
+        
+        if normalize_url(full_url) in normalized_done_urls or normalize_url(a['href'].strip()) in normalized_done_urls:
+            print(f"   ⏩ 已處理過（URL 重複或跳轉網址）")
             continue
 
         domain = urlparse(full_url).netloc
@@ -78,6 +93,7 @@ def fetch_ct_articles_and_save(index_url, output_dir, source_label="中時"):
 
         title = a.get('title', '').strip() or a.text.strip()
         print(f"  {i:02d}. 嘗試擷取文章：{title}")
+
         try:
             driver = create_driver()
             driver.get(full_url)
@@ -85,6 +101,7 @@ def fetch_ct_articles_and_save(index_url, output_dir, source_label="中時"):
             html = driver.page_source
             driver.quit()
 
+            
             article = Article(full_url, language='zh')
             article.set_html(html)
             article.parse()
@@ -94,17 +111,13 @@ def fetch_ct_articles_and_save(index_url, output_dir, source_label="中時"):
             filename = f"{publish_time}_{source_label}_{clean_title}.txt"
             filepath = os.path.join(subdir, filename)
 
-            if os.path.exists(filepath):
-                print(f"   ⏩ 已存在：{filename}，跳過不處理")
-                continue
-
             with open(filepath, "w", encoding="utf-8") as f:
-                f.write(f"標題: {article.title}\n")
+                f.write(f"標題: {article.title or title}\n")
                 f.write(f"連結: {full_url}\n\n")
                 f.write(article.text)
+            
             append_done_url(done_file, full_url)
 
-            append_done_url(done_file, full_url)
             print(f"   ✅ 已儲存：{filename}")
         except Exception as e:
             print(f"   ❌ 擷取失敗：{e}")

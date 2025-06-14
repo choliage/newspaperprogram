@@ -15,6 +15,11 @@ def load_done_urls(file_path):
             return set(line.strip() for line in f)
     return set()
 
+def normalize_url(url):
+
+    parsed = re.sub(r'^https?://(www\.)?', '', url).rstrip('/')
+    return parsed.lower()
+
 def append_done_url(file_path, url):
     with open(file_path, "a", encoding="utf-8") as f:
         f.write(url + "\n")
@@ -103,10 +108,6 @@ def fetch_udn_articles_and_save(page_url, output_dir, source_label="聯合"):
                 clean_title = sanitize_filename(article.title or title)
                 filename = f"{publish_time}_{source_label}_{clean_title}.txt"
                 filepath = os.path.join(subdir, filename)
-
-                if os.path.exists(filepath):
-                    print(f"   ⏩ 已存在：{filename}，跳過不處理")
-                    continue
 
                 with open(filepath, "w", encoding="utf-8") as f:
                     f.write(f"標題: {article.title}\n")
