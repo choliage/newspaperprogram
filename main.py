@@ -140,7 +140,7 @@ if __name__ == "__main__":
         scan_once()
 
         end_time = datetime.now()
-        next_run_time = start_time + timedelta(minutes=1)
+        next_run_time = end_time + timedelta(hours=1)
         sleep_seconds = (next_run_time - datetime.now()).total_seconds()
 
         print(f"✅ 本輪完成時間：{end_time.strftime('%Y-%m-%d %H:%M:%S')}")

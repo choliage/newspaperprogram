@@ -25,8 +25,7 @@ def normalize_url(url):
         parsed = urlparse(url)
         netloc = parsed.netloc.replace("www.", "").lower()
         path = parsed.path.rstrip("/")
-        query = f"?{parsed.query}" if parsed.query else ""
-        return f"{netloc}{path}{query}"
+        return f"{netloc}{path}"  # ✅ 已移除 query string
     except:
         return url.strip().lower()
 
