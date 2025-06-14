@@ -1,15 +1,20 @@
 import os
 import time
-from datetime import datetime
-from scraper_udn import fetch_udn_articles_and_save
-from scraper_ct import fetch_ct_articles_and_save
-from datetime import datetime, timedelta
-from scraper_ltn import fetch_ltn_articles_and_save
 import pandas as pd
 import re
 import random
-import newspaper
+import customtkinter as ctk
+import io
+import sys
+import threading
+import subprocess
+from scraper_udn import fetch_udn_articles_and_save
+from scraper_ltn import fetch_ltn_articles_and_save
+from scraper_ct import fetch_ct_articles_auto
+from checkEPU import run_check
+from datetime import datetime, timedelta
 
+is_animating = False
 
 BASE_DIR = os.path.join(os.path.abspath(os.getcwd()), "整合結果")
 
@@ -26,28 +31,10 @@ TARGETS = [
         'fetch_and_save': fetch_udn_articles_and_save,
         'param_name': 'page_url'
     },
-{
+    {
         'label': '中時',
         'url': 'https://www.chinatimes.com/money/total?page=1&chdtv',
-        'fetch_and_save': fetch_ct_articles_and_save,
-        'param_name': 'index_url'
-    },
-    {
-        'label': '中時',
-        'url': 'https://www.chinatimes.com/money/total?page=2&chdtv',
-        'fetch_and_save': fetch_ct_articles_and_save,
-        'param_name': 'index_url'
-    },
-    {
-        'label': '中時',
-        'url': 'https://www.chinatimes.com/money/total?page=3&chdtv',
-        'fetch_and_save': fetch_ct_articles_and_save,
-        'param_name': 'index_url'
-    },
-    {
-        'label': '中時',
-        'url': 'https://www.chinatimes.com/money/total?page=4&chdtv',
-        'fetch_and_save': fetch_ct_articles_and_save,
+        'fetch_and_save': fetch_ct_articles_auto,
         'param_name': 'index_url'
     },
     {
@@ -59,11 +46,38 @@ TARGETS = [
 
 
 ]
-    
+def set_default_font():
+    from tkinter import font as tkfont
+    default_font = tkfont.nametofont("TkDefaultFont")
+    default_font.configure(family="Microsoft JhengHei UI", size=13)
+
+def animate_status_label(base_text="掃描中", icon="🔴"):
+    def run():
+        dots = [".", ". .", ". . ."]
+        i = 0
+        while is_animating:
+            status_label.configure(text=f"{icon} 狀態：{base_text}{dots[i % len(dots)]}")
+            i += 1
+            time.sleep(0.5)
+    threading.Thread(target=run, daemon=True).start()    
+
+def update_countdown_loop():
+    def loop():
+        while True:
+            if hasattr(app, "next_run_time"):
+                remaining = app.next_run_time - datetime.now()
+                if remaining.total_seconds() > 0:
+                    mins, secs = divmod(int(remaining.total_seconds()), 60)
+                    countdown_label.configure(text=f"⏳ 下次擷取剩餘：{mins} 分 {secs} 秒")
+                else:
+                    countdown_label.configure(text=f"⏳ 正在擷取中...")
+            else:
+                countdown_label.configure(text="⏳ 下次擷取剩餘：-- 分 -- 秒")
+            time.sleep(1)
+    threading.Thread(target=loop, daemon=True).start()
 
 def scan_once():
     print(f"\n⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - 開始擷取")
-    print(f"\n程序 💀ABSOLUTE-CINEMA💀 已經啟動")
     print(f"\n📁 儲存資料夾：", BASE_DIR)
     for target in TARGETS:
         print(f"📡 擷取：{target['label']}")
@@ -78,7 +92,11 @@ def scan_once():
             print(f"❌ 擷取失敗：{target['label']}，原因：{e}")
     print("✅ 擷取完成\n")
     # 🔽 自動產出 Excel：每週為單位彙整新聞標題、日期、網址
-    def postprocess_to_excel(output_root_dir):
+
+def open_result_folder():
+    subprocess.Popen(['explorer', BASE_DIR])
+
+def postprocess_to_excel(output_root_dir):
         
         from datetime import datetime
         from collections import defaultdict
@@ -131,29 +149,114 @@ def scan_once():
                 df.to_excel(out_path, index=False)
 
             print(f"📊 {source} 匯出 Excel 完成（共 {len(by_week)} 週）")
+        
+        
 
-    postprocess_to_excel(BASE_DIR)
+
 
 if __name__ == "__main__":
-    print("🔁 每小時新聞自動擷取啟動中...")
-    while True:
-        start_time = datetime.now()
-        print(f"\n⏰ 本輪開始時間：{start_time.strftime('%Y-%m-%d %H:%M:%S')}")
+  
 
-        scan_once()
+    # GUI 介面設定
+    ctk.set_appearance_mode("dark")
+    ctk.set_default_color_theme("blue")
+    
+    app = ctk.CTk()
+    set_default_font()
+    button_frame = ctk.CTkFrame(app)
+    button_frame.pack(side="bottom", fill="x", pady=(10, 10))
+    
+    def run_once_now():
+        def task():
+            global is_animating
+            is_animating = True
+            animate_status_label("掃描中", "🔴")
+            print(f"\n🧨【手動觸發】開始於：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            scan_once()
+            is_animating = False
+            update_status("完成", "🟢")
+            print(f"\n✅ 掃描完成：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        threading.Thread(target=task).start()
 
-        end_time = datetime.now()
-        next_run_time = end_time + timedelta(hours=1)
-        sleep_seconds = (next_run_time - datetime.now()).total_seconds()
+    run_once_button = ctk.CTkButton(button_frame, text="▶ 立即重新執行爬蟲", command=run_once_now)
+    run_once_button.pack(side="left", padx=(10))
+    
+    run_once_button2 = ctk.CTkButton(
+    button_frame,
+    text="▶ EPU重算",
+    command=lambda: run_check(BASE_DIR)
+    )
+    run_once_button2.pack(side="left", padx=(10))
 
-        print(f"✅ 本輪完成時間：{end_time.strftime('%Y-%m-%d %H:%M:%S')}")
-        print(f"🕐 預計下一輪開始時間：{next_run_time.strftime('%Y-%m-%d %H:%M:%S')}")
-        print(random.choice([
-            "跑都跑完了，先去喝個茶吧",
-            "兄阿，居然成功了，絕對的電影院💀",
-            "男人我罐頭我說 (Man what can I say)",
-            "又跑一輪，凌晨四點叫 Kobe 把我載走好了"
-        ]))
+    run_once_button3 = ctk.CTkButton(
+        button_frame,
+        text="▶ EXCEL統計資料",
+        command=lambda: postprocess_to_excel(BASE_DIR)
+    )
+    run_once_button3.pack(side="left", padx=(10))
 
-        if sleep_seconds > 0:
-            time.sleep(sleep_seconds)
+    open_button = ctk.CTkButton(button_frame, text="📂 開啟整合資料夾", command=open_result_folder)
+    open_button.pack(pady=5)
+
+    app.geometry("800x500")
+    app.title("P.O.E - Precision,Observe,Exact. Ver.1.0.0")
+
+    # 狀態燈 + 標籤區
+    status_label = ctk.CTkLabel(app, text="🟡 狀態：等待中", font=("Segoe UI", 16))
+    status_label.pack(pady=(15, 5))
+
+    countdown_label = ctk.CTkLabel(app, text="⏳ 下次擷取剩餘：-- 分 -- 秒", font=("Segoe UI", 14))
+    countdown_label.pack(pady=(0, 5))
+
+    # 日誌區
+    log_box = ctk.CTkTextbox(app, wrap="word")
+    log_box.pack(padx=20, pady=(0, 20), fill="both", expand=True)
+
+    # 將 stdout 導入 GUI
+    class TextRedirector(io.TextIOBase):
+        def write(self, s):
+            log_box.insert("end", s)
+            log_box.see("end")
+            return len(s)
+    sys.stdout = TextRedirector()
+    sys.stderr = TextRedirector()
+
+    # 狀態燈控制函數
+    def update_status(text, emoji):
+        status_label.configure(text=f"{emoji} 狀態：{text}")
+
+    # 執行原始 while True
+    def background_task():
+        print("🔁 每小時新聞自動擷取啟動中...") 
+        while True:
+            start_time = datetime.now()
+            update_status("執行中", "🔴")
+            print(f"\n⏰ 本輪開始時間：{start_time.strftime('%Y-%m-%d %H:%M:%S')}")
+            global is_animating
+            is_animating = True
+            animate_status_label("掃描中", "🔴")
+            scan_once()
+            is_animating = False
+            update_status("等待中", "🟡")
+            end_time = datetime.now()
+            next_run = end_time + timedelta(hours=1)
+            app.next_run_time = next_run
+            
+            run_check(BASE_DIR)
+            postprocess_to_excel(BASE_DIR)
+            print(f"✅ 完成：{end_time.strftime('%Y-%m-%d %H:%M:%S')}")
+            print(f"🕐 下次：{next_run.strftime('%Y-%m-%d %H:%M:%S')}")
+            print(random.choice([
+                "🔹 P.O.E. 系統完美執行",
+                "🔹 Precision. Observe. Exact. 已經完成了P.O.E.任務",
+                "🔹 小提示:P.O.E.也是開發者最愛又最恨的遊戲縮寫",
+                "🔹 已完成本輪，請至整合資料夾中確認輸出"
+            ]))
+            
+            update_status("等待中", "🟡")
+            time.sleep((next_run - datetime.now()).total_seconds())
+            
+
+    threading.Thread(target=background_task, daemon=True).start()
+    update_countdown_loop()
+    app.mainloop()
