@@ -8,8 +8,10 @@ from scraper_ltn import fetch_ltn_articles_and_save
 import pandas as pd
 import re
 import random
+import newspaper
 
-BASE_DIR = r"C:\Users\lolee\Desktop\studios\爬蟲\整合結果"
+
+BASE_DIR = os.path.join(os.path.abspath(os.getcwd()), "整合結果")
 
 TARGETS = [
     {
@@ -62,6 +64,7 @@ TARGETS = [
 def scan_once():
     print(f"\n⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - 開始擷取")
     print(f"\n程序 💀ABSOLUTE-CINEMA💀 已經啟動")
+    print(f"\n📁 儲存資料夾：", BASE_DIR)
     for target in TARGETS:
         print(f"📡 擷取：{target['label']}")
         try:

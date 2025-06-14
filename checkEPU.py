@@ -1,2 +1,4 @@
 import os
-import time
+
+path = os.path.abspath(os.getcwd())
+print(path)
