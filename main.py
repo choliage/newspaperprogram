@@ -4,6 +4,7 @@ from datetime import datetime
 from scraper_udn import fetch_udn_articles_and_save
 from scraper_ct import fetch_ct_articles_and_save
 from datetime import datetime, timedelta
+from scraper_ltn import fetch_ltn_articles_and_save
 
 BASE_DIR = r"C:\Users\lolee\Desktop\studios\爬蟲\整合結果"
 
@@ -68,6 +69,13 @@ TARGETS = [
         'fetch_and_save': fetch_ct_articles_and_save,
         'param_name': 'index_url'
     },
+     
+    {
+    'label': '自由時報',
+    'url': 'https://ec.ltn.com.tw/',
+    'fetch_and_save': fetch_ltn_articles_and_save,
+    'param_name': 'index_url'
+    }
 
 
 ]
