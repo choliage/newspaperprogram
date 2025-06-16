@@ -9,13 +9,15 @@ import io
 import sys
 import threading
 import subprocess
-from log import setup_logging_with_gui, GuiLogHandler
+from log import setup_logging_with_gui
 from scraper_udn import fetch_udn_articles_and_save
 from scraper_ltn import fetch_ltn_articles_and_save, fetch_ltn_world_articles_and_save
 from scraper_ct import fetch_ct_articles_auto
-from checkEPU import run_check
+from checkEPU import run_check, generate_epu_index_report
 from datetime import datetime, timedelta
 from monthly_cleaner import archive_last_month
+from pathlib import Path
+
 
 is_animating = False
 
@@ -159,8 +161,103 @@ def postprocess_to_excel(output_root_dir):
                 df.to_excel(out_path, index=False)
 
             logging.info(f"📊 {source} 匯出 Excel 完成（共 {len(by_week)} 週）")
-        
-        
+
+def summarize_run(base_dir):
+    from pathlib import Path
+    import pandas as pd
+    import re
+
+    target_date = datetime.now().strftime("%Y-%m-%d")
+    base = Path(base_dir)
+
+    txt_report = {}
+    grouped_sources = {}
+    excel_report = {}
+
+    # 映射設定：將子來源歸入主報社名稱
+    source_mapping = {
+        "聯合國際": "聯合報",
+        "聯合產經": "聯合報",
+        "自由時報_國際": "自由時報",
+        "自由時報_財經": "自由時報",
+        "中時": "中時"
+    }
+
+    # 第一步：掃描各子來源 txt
+    for folder in base.iterdir():
+        if not folder.is_dir() or folder.name == "EPU匯出結果":
+            continue
+        matched_txts = list(folder.glob(f"*{target_date}*.txt"))
+        if matched_txts:
+            name = folder.name
+            mapped = source_mapping.get(name, name)
+            count = len(matched_txts)
+            txt_report[name] = count
+            if mapped not in grouped_sources:
+                grouped_sources[mapped] = []
+            grouped_sources[mapped].append(name)
+
+    # 第二步：讀取 Excel
+    epu_excel_dir = base / "EPU匯出結果" / target_date
+    if not epu_excel_dir.exists():
+        logging.warning("⚠ 無法找到當日 EPU 匯出 Excel 資料夾")
+        return
+
+    for file in epu_excel_dir.glob("*_EPU檢查結果.xlsx"):
+        try:
+            df = pd.read_excel(file)
+            df_valid = df[df["檔名"].notna()]
+            count = len(df_valid)
+            match = (df_valid["是否符合 EPU"] == "✔ 是").sum()
+            name_match = re.match(rf"{target_date}_(.+?)_EPU檢查結果", file.stem)
+            if name_match:
+                src_label = name_match.group(1)
+                excel_report[src_label] = {"excel_count": count, "epu_count": match}
+        except Exception as e:
+            logging.warning(f"⚠ 讀取 Excel 檔失敗：{file.name} - {e}")
+
+    # 顯示
+    logging.info("\n📋【擷取總結報告】")
+    logging.info(f"📅 日期：{target_date}")
+    logging.info(f"📰 掃描來源：{', '.join(sorted(txt_report))}")
+
+    total_txt = 0
+    total_excel = 0
+    total_epu = 0
+
+    for main_src in sorted(grouped_sources):
+        children = grouped_sources[main_src]
+        txt_sum = sum(txt_report.get(c, 0) for c in children)
+        total_txt += txt_sum
+
+        # 顯示主來源 Excel 數據（如果有）
+        if main_src in excel_report:
+            excel_count = excel_report[main_src]["excel_count"]
+            epu_count = excel_report[main_src]["epu_count"]
+            total_excel += excel_count
+            total_epu += epu_count
+            logging.info(f"\n   └ {main_src}：Excel實際處理 {excel_count}，符合 EPU：{epu_count}")
+        else:
+            logging.info(f"\n   └ {main_src}：Excel實際處理 0，符合 EPU：0")
+
+        for child in children:
+            logging.info(f"       └ {child}：txt原始數 {txt_report.get(child, 0)}")
+
+    # 顯示指數
+    epu_index_value = "-"
+    index_path = base / "EPU匯出結果" / "EPU_每日指數.xlsx"
+    if index_path.exists():
+        try:
+            df_idx = pd.read_excel(index_path)
+            today_row = df_idx[df_idx["日期"] == target_date]
+            if not today_row.empty:
+                epu_index_value = round(float(today_row.iloc[0]["正規化指數"]), 2)
+        except:
+            pass
+
+    logging.info(f"\n📦 今日 txt 總數：{total_txt} 篇")
+    logging.info(f"📄 Excel 實際處理數：{total_excel} 篇，符合 EPU：{total_epu} 篇")
+    logging.info(f"📈 今日 EPU 指數：{epu_index_value}")
 
 
 
@@ -193,12 +290,6 @@ if __name__ == "__main__":
     run_once_button = ctk.CTkButton(button_frame, text="▶ 立即重新執行爬蟲", command=run_once_now)
     run_once_button.pack(side="left", padx=(10))
     
-    run_once_button2 = ctk.CTkButton(
-    button_frame,
-    text="▶ EPU重算",
-    command=lambda: run_check(BASE_DIR)
-    )
-    run_once_button2.pack(side="left", padx=(10))
 
     run_once_button3 = ctk.CTkButton(
         button_frame,
@@ -206,7 +297,12 @@ if __name__ == "__main__":
         command=lambda: postprocess_to_excel(BASE_DIR)
     )
     run_once_button3.pack(side="left", padx=(10,10))
-
+    run_summary_button = ctk.CTkButton(
+        button_frame,
+        text="▶ 重新統計摘要",
+        command=lambda: summarize_run(BASE_DIR)
+    )
+    run_summary_button.pack(side="left", padx=(10))
     open_button = ctk.CTkButton(button_frame, text="📂 開啟整合資料夾", command=open_result_folder)
     open_button.pack(side="right",padx=(10,10))
 
@@ -257,6 +353,7 @@ if __name__ == "__main__":
             app.next_run_time = next_run
             
             run_check(BASE_DIR) 
+            generate_epu_index_report("整合結果")
             postprocess_to_excel(BASE_DIR)
             archive_last_month()
             logging.info(f"✅ 完成：{end_time.strftime('%Y-%m-%d %H:%M:%S')}")
@@ -267,6 +364,7 @@ if __name__ == "__main__":
                 "🔹 小提示:P.O.E.也是開發者最愛又最恨的遊戲縮寫",
                 "🔹 已完成本輪，請至整合資料夾中確認輸出"
             ]))
+            summarize_run(BASE_DIR)
             
             update_status("等待中", "🟡")
             time.sleep((next_run - datetime.now()).total_seconds())

@@ -1,9 +1,9 @@
 # **爬蟲專案**  
 ### **待辦**  
-額外建立全自動掃關鍵字的另外一部分  
+~~額外建立全自動掃關鍵字的另外一部分~~  
 匯出資料雲端化  
 ~~EPU自動抓取~~
-EPU指數自動建立
+~~EPU指數自動建立~~
 ~~輸出路徑自動化(可選)~~   
 ~~Excel 計畫以周圍單位劃分~~  
 ~~一周內新聞/標題/日期/網址~~  
@@ -35,21 +35,4 @@ EPU指數自動建立
 安裝後運行即可  
 GUI按鈕可隨時按下檢查  
 
-{
-        'label': '聯合國際',
-        'url': 'https://udn.com/news/cate/2/7225',
-        'fetch_and_save': fetch_udn_articles_and_save,
-        'param_name': 'page_url'
-    },
-    {
-        'label': '聯合產經',
-        'url': 'https://udn.com/news/cate/2/6644',
-        'fetch_and_save': fetch_udn_articles_and_save,
-        'param_name': 'page_url'
-    },
-    {
-        'label': '中時',
-        'url': 'https://www.chinatimes.com/money/total?page=1&chdtv',
-        'fetch_and_save': fetch_ct_articles_auto,
-        'param_name': 'index_url'
-    },
+

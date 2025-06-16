@@ -1,0 +1,889 @@
+2025-06-16 15:45:35,617 [INFO] 📓 運行日誌的起點 : 2025-06-16_15:45
+2025-06-16 15:45:35,617 [INFO] ========================================
+2025-06-16 15:45:35,617 [INFO] 🔁 每小時新聞自動擷取啟動中...
+2025-06-16 15:45:35,761 [INFO] 
+⏰ 本輪開始時間：2025-06-16 15:45:35
+2025-06-16 15:45:35,763 [INFO] 
+⏰ 2025-06-16 15:45:35 - 開始擷取
+2025-06-16 15:45:35,770 [INFO] 📁 儲存資料夾：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果
+2025-06-16 15:45:35,770 [INFO] 📡 擷取：聯合國際
+2025-06-16 15:45:35,782 [INFO] 🚩 進入 fetch_udn_articles_and_save：https://udn.com/news/cate/2/7225
+2025-06-16 15:45:35,914 [INFO] 🔍 找到 62 篇文章區塊
+2025-06-16 15:45:35,914 [INFO] 🔗 嘗試解析跳轉網址: https://udn.com/news/story/124061/8810398?from=udn-catelistnews_ch2
+2025-06-16 15:45:36,290 [INFO] 🌐 使用 Selenium 嘗試跳轉: https://udn.com/news/story/124061/8810398?from=udn-catelistnews_ch2
+2025-06-16 15:45:50,536 [INFO]   07. 嘗試擷取文章：伊朗議長爆「內鬼通外敵」！擬組伊斯蘭聯軍對抗以色列
+2025-06-16 15:45:50,728 [DEBUG] Building prefix dict from C:\Users\lolee\AppData\Local\Temp\_MEI125282\jieba\dict.txt ...
+2025-06-16 15:45:51,322 [DEBUG] Dumping model to file cache C:\Users\lolee\AppData\Local\Temp\jieba.cache
+2025-06-16 15:45:52,225 [DEBUG] Loading model cost 1.4961793422698975 seconds.
+2025-06-16 15:45:52,226 [DEBUG] Prefix dict has been built succesfully.
+2025-06-16 15:45:52,241 [INFO]    ✅ 已儲存：2025-06-16_1527_聯合國際_伊朗議長爆「內鬼通外敵」！擬組伊斯蘭聯軍對抗以色列.txt
+2025-06-16 15:45:52,241 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:45:52,246 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:45:52,251 [INFO] 🔗 嘗試解析跳轉網址: https://udn.com/news/story/124061/8810390?from=udn-catelistnews_ch2
+2025-06-16 15:45:52,639 [INFO] 🌐 使用 Selenium 嘗試跳轉: https://udn.com/news/story/124061/8810390?from=udn-catelistnews_ch2
+2025-06-16 15:45:54,752 [INFO] 📊 EPU匯出結果 匯出 Excel 完成（共 0 週）
+2025-06-16 15:45:54,753 [INFO] 📊 monthly_archives 匯出 Excel 完成（共 0 週）
+2025-06-16 15:45:54,899 [INFO] 📊 中時 匯出 Excel 完成（共 2 週）
+2025-06-16 15:45:55,025 [INFO] 📊 聯合國際 匯出 Excel 完成（共 5 週）
+2025-06-16 15:45:55,120 [INFO] 📊 聯合產經 匯出 Excel 完成（共 4 週）
+2025-06-16 15:45:55,178 [INFO] 📊 自由時報_國際 匯出 Excel 完成（共 2 週）
+2025-06-16 15:45:55,342 [INFO] 📊 自由時報_財經 匯出 Excel 完成（共 5 週）
+2025-06-16 15:45:56,777 [INFO] 
+📋【擷取總結報告】
+2025-06-16 15:45:56,777 [INFO] 📅 日期：2025-06-16
+2025-06-16 15:45:56,777 [INFO] 📰 掃描來源：中時, 聯合國際, 聯合產經, 自由時報_國際, 自由時報_財經
+2025-06-16 15:45:56,777 [INFO] 
+   └ 中時：Excel實際處理 135，符合 EPU：50
+2025-06-16 15:45:56,777 [INFO]        └ 中時：txt原始數 135
+2025-06-16 15:45:56,777 [INFO] 
+   └ 聯合報：Excel實際處理 160，符合 EPU：32
+2025-06-16 15:45:56,777 [INFO]        └ 聯合國際：txt原始數 82
+2025-06-16 15:45:56,778 [INFO]        └ 聯合產經：txt原始數 79
+2025-06-16 15:45:56,778 [INFO] 
+   └ 自由時報：Excel實際處理 109，符合 EPU：25
+2025-06-16 15:45:56,778 [INFO]        └ 自由時報_國際：txt原始數 42
+2025-06-16 15:45:56,778 [INFO]        └ 自由時報_財經：txt原始數 67
+2025-06-16 15:45:56,784 [INFO] 
+📦 今日 txt 總數：405 篇
+2025-06-16 15:45:56,784 [INFO] 📄 Excel 實際處理數：404 篇，符合 EPU：107 篇
+2025-06-16 15:45:56,784 [INFO] 📈 今日 EPU 指數：165.66
+2025-06-16 15:45:58,598 [INFO] 📊 EPU匯出結果 匯出 Excel 完成（共 0 週）
+2025-06-16 15:45:58,598 [INFO] 📊 monthly_archives 匯出 Excel 完成（共 0 週）
+2025-06-16 15:45:58,702 [INFO] 📊 中時 匯出 Excel 完成（共 2 週）
+2025-06-16 15:45:58,812 [INFO] 📊 聯合國際 匯出 Excel 完成（共 5 週）
+2025-06-16 15:45:58,899 [INFO] 📊 聯合產經 匯出 Excel 完成（共 4 週）
+2025-06-16 15:45:58,957 [INFO] 📊 自由時報_國際 匯出 Excel 完成（共 2 週）
+2025-06-16 15:45:59,086 [INFO] 📊 自由時報_財經 匯出 Excel 完成（共 5 週）
+2025-06-16 15:46:04,674 [INFO] 📊 EPU匯出結果 匯出 Excel 完成（共 0 週）
+2025-06-16 15:46:04,674 [INFO] 📊 monthly_archives 匯出 Excel 完成（共 0 週）
+2025-06-16 15:46:04,769 [INFO] 📊 中時 匯出 Excel 完成（共 2 週）
+2025-06-16 15:46:04,874 [INFO] 📊 聯合國際 匯出 Excel 完成（共 5 週）
+2025-06-16 15:46:04,956 [INFO] 📊 聯合產經 匯出 Excel 完成（共 4 週）
+2025-06-16 15:46:05,011 [INFO] 📊 自由時報_國際 匯出 Excel 完成（共 2 週）
+2025-06-16 15:46:05,141 [INFO] 📊 自由時報_財經 匯出 Excel 完成（共 5 週）
+2025-06-16 15:46:05,619 [INFO]   10. 嘗試擷取文章：伊朗徹夜發動飛彈攻勢 以色列至少新增5死100傷
+2025-06-16 15:46:05,790 [INFO]    ✅ 已儲存：2025-06-16_1530_聯合國際_伊朗徹夜發動飛彈攻勢 以色列至少新增5死100傷.txt
+2025-06-16 15:46:05,791 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,797 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,803 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,808 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,812 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,817 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,821 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,824 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,828 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,832 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,836 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,840 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,844 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,847 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:05,851 [INFO] 🔗 嘗試解析跳轉網址: https://udn.com/news/story/6809/8810432?from=udn-catelistnews_ch2
+2025-06-16 15:46:06,299 [INFO] 🌐 使用 Selenium 嘗試跳轉: https://udn.com/news/story/6809/8810432?from=udn-catelistnews_ch2
+2025-06-16 15:46:08,568 [INFO] 📊 EPU匯出結果 匯出 Excel 完成（共 0 週）
+2025-06-16 15:46:08,568 [INFO] 📊 monthly_archives 匯出 Excel 完成（共 0 週）
+2025-06-16 15:46:08,700 [INFO] 📊 中時 匯出 Excel 完成（共 2 週）
+2025-06-16 15:46:08,814 [INFO] 📊 聯合國際 匯出 Excel 完成（共 5 週）
+2025-06-16 15:46:08,901 [INFO] 📊 聯合產經 匯出 Excel 完成（共 4 週）
+2025-06-16 15:46:08,959 [INFO] 📊 自由時報_國際 匯出 Excel 完成（共 2 週）
+2025-06-16 15:46:09,111 [INFO] 📊 自由時報_財經 匯出 Excel 完成（共 5 週）
+2025-06-16 15:46:11,099 [INFO] 📊 EPU匯出結果 匯出 Excel 完成（共 0 週）
+2025-06-16 15:46:11,099 [INFO] 📊 monthly_archives 匯出 Excel 完成（共 0 週）
+2025-06-16 15:46:11,228 [INFO] 📊 中時 匯出 Excel 完成（共 2 週）
+2025-06-16 15:46:11,374 [INFO] 📊 聯合國際 匯出 Excel 完成（共 5 週）
+2025-06-16 15:46:11,489 [INFO] 📊 聯合產經 匯出 Excel 完成（共 4 週）
+2025-06-16 15:46:11,609 [INFO] 📊 自由時報_國際 匯出 Excel 完成（共 2 週）
+2025-06-16 15:46:11,772 [INFO] 📊 自由時報_財經 匯出 Excel 完成（共 5 週）
+2025-06-16 15:46:16,512 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-13\2025-06-13_中時_EPU檢查結果.xlsx
+2025-06-16 15:46:16,596 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-14\2025-06-14_中時_EPU檢查結果.xlsx
+2025-06-16 15:46:16,665 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-15\2025-06-15_中時_EPU檢查結果.xlsx
+2025-06-16 15:46:16,749 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-16\2025-06-16_中時_EPU檢查結果.xlsx
+2025-06-16 15:46:16,792 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2024-04-29\2024-04-29_聯合報_EPU檢查結果.xlsx
+2025-06-16 15:46:16,818 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-03-28\2025-03-28_聯合報_EPU檢查結果.xlsx
+2025-06-16 15:46:16,854 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-04-09\2025-04-09_聯合報_EPU檢查結果.xlsx
+2025-06-16 15:46:16,889 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-02\2025-06-02_聯合報_EPU檢查結果.xlsx
+2025-06-16 15:46:16,933 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-09\2025-06-09_聯合報_EPU檢查結果.xlsx
+2025-06-16 15:46:16,969 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-10\2025-06-10_聯合報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,003 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-11\2025-06-11_聯合報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,031 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-12\2025-06-12_聯合報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,106 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-13\2025-06-13_聯合報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,185 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-14\2025-06-14_聯合報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,262 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-15\2025-06-15_聯合報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,359 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-16\2025-06-16_聯合報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,395 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\0001-11-30\0001-11-30_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,423 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-01\2025-06-01_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,465 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-02\2025-06-02_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,496 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-03\2025-06-03_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,540 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-04\2025-06-04_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,585 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-05\2025-06-05_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,628 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-06\2025-06-06_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,672 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-07\2025-06-07_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,724 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-09\2025-06-09_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,772 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-10\2025-06-10_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,816 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-11\2025-06-11_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,880 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-12\2025-06-12_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:17,958 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-13\2025-06-13_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:18,016 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-14\2025-06-14_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:18,078 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-15\2025-06-15_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:18,151 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-16\2025-06-16_自由時報_EPU檢查結果.xlsx
+2025-06-16 15:46:19,564 [INFO]   25. 嘗試擷取文章：以色列為何與伊朗開戰？以軍官曝伊朗「祕密計畫」
+2025-06-16 15:46:19,753 [INFO]    ✅ 已儲存：2025-06-16_1541_聯合國際_以色列為何與伊朗開戰？以軍官曝伊朗「祕密計畫」.txt
+2025-06-16 15:46:19,753 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,766 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,771 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,777 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,784 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,790 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,795 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,801 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,807 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,812 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,816 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,820 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,824 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,828 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,834 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,838 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,845 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,848 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,852 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,856 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,863 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,867 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,872 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,874 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,877 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,880 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,885 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,888 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,892 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:19,897 [INFO] 📡 擷取：聯合產經
+2025-06-16 15:46:19,901 [INFO] 🚩 進入 fetch_udn_articles_and_save：https://udn.com/news/cate/2/6644
+2025-06-16 15:46:20,008 [INFO] 🔍 找到 49 篇文章區塊
+2025-06-16 15:46:20,009 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:20,012 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:20,016 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:20,020 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:20,024 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:20,027 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:20,032 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:20,036 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:20,040 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:20,044 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 15:46:20,048 [INFO] 🔗 嘗試解析跳轉網址: https://udn.com/news/story/7239/8810401?from=udn-catelistnews_ch2
+2025-06-16 15:46:20,431 [INFO] 🌐 使用 Selenium 嘗試跳轉: https://udn.com/news/story/7239/8810401?from=udn-catelistnews_ch2
+2025-06-16 15:46:22,832 [INFO] 📊 EPU匯出結果 匯出 Excel 完成（共 0 週）
+2025-06-16 15:46:22,832 [INFO] 📊 monthly_archives 匯出 Excel 完成（共 0 週）
+2025-06-16 15:46:22,937 [INFO] 📊 中時 匯出 Excel 完成（共 2 週）
+2025-06-16 15:46:23,061 [INFO] 📊 聯合國際 匯出 Excel 完成（共 5 週）
+2025-06-16 15:46:23,166 [INFO] 📊 聯合產經 匯出 Excel 完成（共 4 週）
+2025-06-16 15:46:23,234 [INFO] 📊 自由時報_國際 匯出 Excel 完成（共 2 週）
+2025-06-16 15:46:23,388 [INFO] 📊 自由時報_財經 匯出 Excel 完成（共 5 週）
+2025-06-16 15:46:25,467 [INFO] 
+📋【擷取總結報告】
+2025-06-16 15:46:25,467 [INFO] 📅 日期：2025-06-16
+2025-06-16 15:46:25,468 [INFO] 📰 掃描來源：中時, 聯合國際, 聯合產經, 自由時報_國際, 自由時報_財經
+2025-06-16 15:46:25,468 [INFO] 
+   └ 中時：Excel實際處理 135，符合 EPU：50
+2025-06-16 15:46:25,468 [INFO]        └ 中時：txt原始數 135
+2025-06-16 15:46:25,468 [INFO] 
+   └ 聯合報：Excel實際處理 162，符合 EPU：32
+2025-06-16 15:46:25,468 [INFO]        └ 聯合國際：txt原始數 84
+2025-06-16 15:46:25,468 [INFO]        └ 聯合產經：txt原始數 79
+2025-06-16 15:46:25,468 [INFO] 
+   └ 自由時報：Excel實際處理 109，符合 EPU：25
+2025-06-16 15:46:25,468 [INFO]        └ 自由時報_國際：txt原始數 42
+2025-06-16 15:46:25,468 [INFO]        └ 自由時報_財經：txt原始數 67
+2025-06-16 15:46:25,475 [INFO] 
+📦 今日 txt 總數：407 篇
+2025-06-16 15:46:25,475 [INFO] 📄 Excel 實際處理數：406 篇，符合 EPU：107 篇
+2025-06-16 15:46:25,475 [INFO] 📈 今日 EPU 指數：165.66
+2025-06-16 15:46:33,889 [INFO]   17. 嘗試擷取文章：什麼情況下台灣央行會降息？ 國泰台大產學合作計畫教授這樣說
+2025-06-16 15:46:34,219 [INFO]    ✅ 已儲存：2025-06-16_1529_聯合產經_什麼情況下台灣央行會降息？ 國泰台大產學合作計畫教授這樣說.txt
+2025-06-16 15:46:34,540 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-13\2025-06-13_中時_EPU檢查結果.xlsx
+2025-06-16 16:25:32,899 [INFO] 📓 運行日誌的起點 : 2025-06-16_16:25
+2025-06-16 16:25:32,899 [INFO] ========================================
+2025-06-16 16:25:32,899 [INFO] 🔁 每小時新聞自動擷取啟動中...
+2025-06-16 16:25:33,031 [INFO] 
+⏰ 本輪開始時間：2025-06-16 16:25:33
+2025-06-16 16:25:33,033 [INFO] 
+⏰ 2025-06-16 16:25:33 - 開始擷取
+2025-06-16 16:25:33,040 [INFO] 📁 儲存資料夾：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果
+2025-06-16 16:25:33,042 [INFO] 📡 擷取：聯合國際
+2025-06-16 16:25:33,054 [INFO] 🚩 進入 fetch_udn_articles_and_save：https://udn.com/news/cate/2/7225
+2025-06-16 16:25:33,179 [INFO] 🔍 找到 62 篇文章區塊
+2025-06-16 16:25:33,179 [INFO] 🔗 嘗試解析跳轉網址: https://udn.com/news/story/124061/8810432?from=udn-catelistnews_ch2
+2025-06-16 16:25:33,492 [INFO] 🌐 使用 Selenium 嘗試跳轉: https://udn.com/news/story/124061/8810432?from=udn-catelistnews_ch2
+2025-06-16 16:26:02,840 [INFO] 📓 運行日誌的起點 : 2025-06-16_16:26
+2025-06-16 16:26:02,840 [INFO] ========================================
+2025-06-16 16:26:02,840 [INFO] 🔁 每小時新聞自動擷取啟動中...
+2025-06-16 16:26:02,976 [INFO] 
+⏰ 本輪開始時間：2025-06-16 16:26:02
+2025-06-16 16:26:02,977 [INFO] 
+⏰ 2025-06-16 16:26:02 - 開始擷取
+2025-06-16 16:26:02,983 [INFO] 📁 儲存資料夾：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果
+2025-06-16 16:26:02,985 [INFO] 📡 擷取：聯合國際
+2025-06-16 16:26:02,998 [INFO] 🚩 進入 fetch_udn_articles_and_save：https://udn.com/news/cate/2/7225
+2025-06-16 16:26:03,168 [INFO] 🔍 找到 62 篇文章區塊
+2025-06-16 16:26:03,169 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:03,184 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:03,185 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:03,187 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:03,188 [INFO] 🔗 嘗試解析跳轉網址: https://udn.com/news/story/124061/8810442?from=udn-catelistnews_ch2
+2025-06-16 16:26:03,564 [INFO] 🌐 使用 Selenium 嘗試跳轉: https://udn.com/news/story/124061/8810442?from=udn-catelistnews_ch2
+2025-06-16 16:26:17,550 [INFO]   11. 嘗試擷取文章：伊朗再襲以色列 美國駐特拉維夫領事館遭波及受損
+2025-06-16 16:26:17,751 [DEBUG] Building prefix dict from C:\Users\lolee\AppData\Local\Temp\_MEI95242\jieba\dict.txt ...
+2025-06-16 16:26:18,343 [DEBUG] Dumping model to file cache C:\Users\lolee\AppData\Local\Temp\jieba.cache
+2025-06-16 16:26:19,186 [DEBUG] Loading model cost 1.4327166080474854 seconds.
+2025-06-16 16:26:19,202 [DEBUG] Prefix dict has been built succesfully.
+2025-06-16 16:26:19,217 [INFO]    ✅ 已儲存：2025-06-16_1616_聯合國際_伊朗再襲以色列 美國駐特拉維夫領事館遭波及受損.txt
+2025-06-16 16:26:19,219 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:19,222 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:19,227 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:19,229 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:19,232 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:19,234 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:19,237 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:19,240 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:19,245 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:19,249 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:19,254 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:19,258 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:19,263 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:19,266 [INFO] 🔗 嘗試解析跳轉網址: https://udn.com/news/story/6809/8810392?from=udn-catelistnews_ch2
+2025-06-16 16:26:19,657 [INFO] 🌐 使用 Selenium 嘗試跳轉: https://udn.com/news/story/6809/8810392?from=udn-catelistnews_ch2
+2025-06-16 16:26:32,612 [INFO]   25. 嘗試擷取文章：報案抵現場未達5分鐘反應時間目標 菲律賓8城市警長遭撤換
+2025-06-16 16:26:32,760 [INFO]    ✅ 已儲存：2025-06-16_1618_聯合國際_報案抵現場未達5分鐘反應時間目標 菲律賓8城市警長遭撤換.txt
+2025-06-16 16:26:32,760 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,766 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,771 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,775 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,780 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,783 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,787 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,791 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,794 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,797 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,800 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,804 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,807 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,810 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,813 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,816 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,820 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,823 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,835 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,841 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,844 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,849 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,854 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,858 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,863 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,867 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,871 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,875 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,880 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:32,884 [INFO] 📡 擷取：聯合產經
+2025-06-16 16:26:32,888 [INFO] 🚩 進入 fetch_udn_articles_and_save：https://udn.com/news/cate/2/6644
+2025-06-16 16:26:33,061 [INFO] 🔍 找到 49 篇文章區塊
+2025-06-16 16:26:33,061 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:33,065 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:33,069 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:33,073 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:33,076 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:33,081 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:33,085 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:33,089 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:33,093 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:33,097 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:33,101 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:33,105 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:33,109 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:33,113 [INFO] 🔗 嘗試解析跳轉網址: https://udn.com/news/story/7239/8810544?from=udn-catelistnews_ch2
+2025-06-16 16:26:33,632 [INFO] 🌐 使用 Selenium 嘗試跳轉: https://udn.com/news/story/7239/8810544?from=udn-catelistnews_ch2
+2025-06-16 16:26:46,938 [INFO]   20. 嘗試擷取文章：台幣逼近29.5元關卡  以29.52作收，升值1.48角
+2025-06-16 16:26:47,113 [INFO]    ✅ 已儲存：2025-06-16_1619_聯合產經_台幣逼近29.5元關卡 以29.52作收，升值1.48角.txt
+2025-06-16 16:26:47,113 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:47,119 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:47,125 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:47,130 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:47,135 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:47,141 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:47,144 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:47,149 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:26:47,153 [INFO] 🔗 嘗試解析跳轉網址: https://udn.com/news/story/7241/8810558?from=udn-catelistnews_ch2
+2025-06-16 16:26:47,585 [INFO] 🌐 使用 Selenium 嘗試跳轉: https://udn.com/news/story/7241/8810558?from=udn-catelistnews_ch2
+2025-06-16 16:27:00,913 [INFO]   29. 嘗試擷取文章：日月光與高雄市教育局攜手辦理產業營隊參訪 提供學生更多學習機會
+2025-06-16 16:27:01,109 [INFO]    ✅ 已儲存：2025-06-16_1622_聯合產經_日月光與高雄市教育局攜手辦理產業營隊參訪 提供學生更多學習機會.txt
+2025-06-16 16:27:01,109 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:27:01,115 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:27:01,121 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:27:01,125 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:27:01,129 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:27:01,133 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:27:01,137 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:27:01,141 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:27:01,144 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:27:01,147 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:27:01,150 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:27:01,154 [INFO]    ⏩ 預檢：已處理過（URL 重複），完全略過
+2025-06-16 16:27:01,157 [INFO] 📡 擷取：中時
+2025-06-16 16:27:01,160 [INFO] 🌀 自動擷取中時頁面：從 https://www.chinatimes.com/money/total?page=1&chdtv 開始，最多 10 頁
+2025-06-16 16:27:01,183 [INFO] 
+📄 掃描中時第 1 頁：https://www.chinatimes.com/money/total?page=1&chdtv
+2025-06-16 16:27:14,279 [INFO] 🔍 找到 12 則文章
+2025-06-16 16:27:14,280 [WARNING] ⚠️ 無新文章，提早結束中時擷取
+2025-06-16 16:27:14,286 [INFO] 📡 擷取：自由時報_財經
+2025-06-16 16:27:25,188 [WARNING] 🔕 跳過影音專區
+2025-06-16 16:27:25,195 [INFO] 📂 分類：《財經政策》
+2025-06-16 16:27:36,199 [INFO]   🔎 共找到 82 篇文章
+2025-06-16 16:27:36,199 [INFO]    01. 擷取文章：https://ec.ltn.com.tw/article/breakingnews/5076807
+2025-06-16 16:27:43,708 [INFO]    ✅ 儲存成功：2025-06-16_1627_自由時報_財經_ec.ltn.com.tw.txt
+2025-06-16 16:27:43,709 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076744
+2025-06-16 16:27:43,712 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076726
+2025-06-16 16:27:43,718 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076724
+2025-06-16 16:27:43,721 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076704
+2025-06-16 16:27:43,725 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076706
+2025-06-16 16:27:43,728 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076533
+2025-06-16 16:27:43,732 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076485
+2025-06-16 16:27:43,734 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076450
+2025-06-16 16:27:43,739 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076384
+2025-06-16 16:27:43,743 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076295
+2025-06-16 16:27:43,747 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076088
+2025-06-16 16:27:43,751 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711762
+2025-06-16 16:27:43,755 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711782
+2025-06-16 16:27:43,758 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711783
+2025-06-16 16:27:43,762 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711784
+2025-06-16 16:27:43,766 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711785
+2025-06-16 16:27:43,769 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711786
+2025-06-16 16:27:43,773 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711787
+2025-06-16 16:27:43,776 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076090
+2025-06-16 16:27:43,780 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076084
+2025-06-16 16:27:43,784 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076046
+2025-06-16 16:27:43,787 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075979
+2025-06-16 16:27:43,790 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075624
+2025-06-16 16:27:43,794 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075510
+2025-06-16 16:27:43,796 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711634
+2025-06-16 16:27:43,800 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711635
+2025-06-16 16:27:43,804 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711636
+2025-06-16 16:27:43,806 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711637
+2025-06-16 16:27:43,810 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711638
+2025-06-16 16:27:43,813 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711643
+2025-06-16 16:27:43,816 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711644
+2025-06-16 16:27:43,820 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075064
+2025-06-16 16:27:43,823 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074810
+2025-06-16 16:27:43,827 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711466
+2025-06-16 16:27:43,830 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711579
+2025-06-16 16:27:43,834 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711580
+2025-06-16 16:27:43,838 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711581
+2025-06-16 16:27:43,842 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711582
+2025-06-16 16:27:43,845 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711583
+2025-06-16 16:27:43,849 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074028?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:27:43,852 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076353?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:27:43,859 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076620?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:27:43,866 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076098?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:27:43,877 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076030?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:27:43,888 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076724
+2025-06-16 16:27:43,898 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076704
+2025-06-16 16:27:43,908 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076706
+2025-06-16 16:27:43,918 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076533
+2025-06-16 16:27:43,928 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076485
+2025-06-16 16:27:43,936 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076450
+2025-06-16 16:27:43,946 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076384
+2025-06-16 16:27:43,955 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076295
+2025-06-16 16:27:43,962 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076088
+2025-06-16 16:27:43,971 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711762
+2025-06-16 16:27:43,979 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711782
+2025-06-16 16:27:43,986 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711783
+2025-06-16 16:27:43,992 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711784
+2025-06-16 16:27:44,000 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711785
+2025-06-16 16:27:44,006 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711786
+2025-06-16 16:27:44,013 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711787
+2025-06-16 16:27:44,020 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076090
+2025-06-16 16:27:44,025 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076084
+2025-06-16 16:27:44,031 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076046
+2025-06-16 16:27:44,037 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075979
+2025-06-16 16:27:44,041 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075624
+2025-06-16 16:27:44,046 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075510
+2025-06-16 16:27:44,051 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711634
+2025-06-16 16:27:44,055 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711635
+2025-06-16 16:27:44,058 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711636
+2025-06-16 16:27:44,062 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711637
+2025-06-16 16:27:44,065 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711638
+2025-06-16 16:27:44,069 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711643
+2025-06-16 16:27:44,072 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711644
+2025-06-16 16:27:44,075 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075064
+2025-06-16 16:27:44,079 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074810
+2025-06-16 16:27:44,082 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711466
+2025-06-16 16:27:44,086 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711579
+2025-06-16 16:27:44,089 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711580
+2025-06-16 16:27:44,092 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711581
+2025-06-16 16:27:44,096 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711582
+2025-06-16 16:27:44,099 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711583
+2025-06-16 16:27:44,103 [INFO] 📂 分類：《國際財經》
+2025-06-16 16:27:55,178 [INFO]   🔎 共找到 82 篇文章
+2025-06-16 16:27:55,179 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076761
+2025-06-16 16:27:55,184 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076679
+2025-06-16 16:27:55,188 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076605
+2025-06-16 16:27:55,193 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076622
+2025-06-16 16:27:55,196 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076617
+2025-06-16 16:27:55,200 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076620
+2025-06-16 16:27:55,204 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076477
+2025-06-16 16:27:55,207 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076267
+2025-06-16 16:27:55,211 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076386
+2025-06-16 16:27:55,214 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076198
+2025-06-16 16:27:55,218 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076353
+2025-06-16 16:27:55,221 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076303
+2025-06-16 16:27:55,225 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076308
+2025-06-16 16:27:55,229 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076278
+2025-06-16 16:27:55,232 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076251
+2025-06-16 16:27:55,236 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076221
+2025-06-16 16:27:55,239 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076206
+2025-06-16 16:27:55,243 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076210
+2025-06-16 16:27:55,246 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076191
+2025-06-16 16:27:55,250 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075755
+2025-06-16 16:27:55,253 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075901
+2025-06-16 16:27:55,257 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076006
+2025-06-16 16:27:55,260 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074028
+2025-06-16 16:27:55,264 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076098
+2025-06-16 16:27:55,267 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076093
+2025-06-16 16:27:55,274 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076152
+2025-06-16 16:27:55,276 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076058
+2025-06-16 16:27:55,279 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076030
+2025-06-16 16:27:55,281 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075892
+2025-06-16 16:27:55,286 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075864
+2025-06-16 16:27:55,289 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075839
+2025-06-16 16:27:55,293 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075777
+2025-06-16 16:27:55,296 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075711
+2025-06-16 16:27:55,300 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075657
+2025-06-16 16:27:55,302 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075599
+2025-06-16 16:27:55,304 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075554
+2025-06-16 16:27:55,306 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075496
+2025-06-16 16:27:55,308 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075510
+2025-06-16 16:27:55,310 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075034
+2025-06-16 16:27:55,312 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074802
+2025-06-16 16:27:55,315 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076030?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:27:55,320 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074028?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:27:55,326 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076088?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:27:55,334 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076620?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:27:55,344 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076617?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:27:55,355 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076622
+2025-06-16 16:27:55,367 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076617
+2025-06-16 16:27:55,376 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076620
+2025-06-16 16:27:55,384 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076477
+2025-06-16 16:27:55,394 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076267
+2025-06-16 16:27:55,403 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076386
+2025-06-16 16:27:55,412 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076198
+2025-06-16 16:27:55,422 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076353
+2025-06-16 16:27:55,428 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076303
+2025-06-16 16:27:55,437 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076308
+2025-06-16 16:27:55,446 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076278
+2025-06-16 16:27:55,451 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076251
+2025-06-16 16:27:55,459 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076221
+2025-06-16 16:27:55,467 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076206
+2025-06-16 16:27:55,473 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076210
+2025-06-16 16:27:55,479 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076191
+2025-06-16 16:27:55,485 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075755
+2025-06-16 16:27:55,490 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075901
+2025-06-16 16:27:55,496 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076006
+2025-06-16 16:27:55,501 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074028
+2025-06-16 16:27:55,504 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076098
+2025-06-16 16:27:55,510 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076093
+2025-06-16 16:27:55,515 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076152
+2025-06-16 16:27:55,519 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076058
+2025-06-16 16:27:55,522 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076030
+2025-06-16 16:27:55,525 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075892
+2025-06-16 16:27:55,529 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075864
+2025-06-16 16:27:55,532 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075839
+2025-06-16 16:27:55,536 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075777
+2025-06-16 16:27:55,538 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075711
+2025-06-16 16:27:55,541 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075657
+2025-06-16 16:27:55,545 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075599
+2025-06-16 16:27:55,549 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075554
+2025-06-16 16:27:55,551 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075496
+2025-06-16 16:27:55,554 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075510
+2025-06-16 16:27:55,558 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075034
+2025-06-16 16:27:55,560 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074802
+2025-06-16 16:27:55,564 [INFO] 📂 分類：《投資理財》
+2025-06-16 16:28:06,656 [INFO]   🔎 共找到 82 篇文章
+2025-06-16 16:28:06,656 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076477
+2025-06-16 16:28:06,658 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076088
+2025-06-16 16:28:06,663 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074770
+2025-06-16 16:28:06,667 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074166
+2025-06-16 16:28:06,671 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5073646
+2025-06-16 16:28:06,675 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5073199
+2025-06-16 16:28:06,678 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5072392
+2025-06-16 16:28:06,682 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5072371
+2025-06-16 16:28:06,686 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5071218
+2025-06-16 16:28:06,689 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5071073
+2025-06-16 16:28:06,693 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5070739
+2025-06-16 16:28:06,697 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5070452
+2025-06-16 16:28:06,701 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5069802
+2025-06-16 16:28:06,705 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5067225
+2025-06-16 16:28:06,708 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5066129
+2025-06-16 16:28:06,711 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5065710
+2025-06-16 16:28:06,715 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5064946
+2025-06-16 16:28:06,719 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062439
+2025-06-16 16:28:06,722 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062399
+2025-06-16 16:28:06,726 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062292
+2025-06-16 16:28:06,730 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062219
+2025-06-16 16:28:06,733 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5061847
+2025-06-16 16:28:06,736 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5061830
+2025-06-16 16:28:06,740 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5061584
+2025-06-16 16:28:06,742 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5060743
+2025-06-16 16:28:06,746 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5060744
+2025-06-16 16:28:06,750 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5060114
+2025-06-16 16:28:06,753 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5059950
+2025-06-16 16:28:06,757 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5058565
+2025-06-16 16:28:06,759 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5056778
+2025-06-16 16:28:06,763 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5056761
+2025-06-16 16:28:06,766 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5056776
+2025-06-16 16:28:06,770 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5055500
+2025-06-16 16:28:06,773 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5055406
+2025-06-16 16:28:06,777 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5055295
+2025-06-16 16:28:06,780 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5055243
+2025-06-16 16:28:06,784 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5054823
+2025-06-16 16:28:06,787 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5054513
+2025-06-16 16:28:06,791 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5054442
+2025-06-16 16:28:06,794 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5052183
+2025-06-16 16:28:06,797 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074028?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:06,801 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076353?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:06,807 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076620?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:06,815 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076098?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:06,823 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076030?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:06,835 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074166
+2025-06-16 16:28:06,845 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5073646
+2025-06-16 16:28:06,858 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5073199
+2025-06-16 16:28:06,867 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5072392
+2025-06-16 16:28:06,876 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5072371
+2025-06-16 16:28:06,883 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5071218
+2025-06-16 16:28:06,893 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5071073
+2025-06-16 16:28:06,902 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5070739
+2025-06-16 16:28:06,909 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5070452
+2025-06-16 16:28:06,917 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5069802
+2025-06-16 16:28:06,925 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5067225
+2025-06-16 16:28:06,932 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5066129
+2025-06-16 16:28:06,940 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5065710
+2025-06-16 16:28:06,947 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5064946
+2025-06-16 16:28:06,953 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062439
+2025-06-16 16:28:06,958 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062399
+2025-06-16 16:28:06,965 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062292
+2025-06-16 16:28:06,969 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062219
+2025-06-16 16:28:06,976 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5061847
+2025-06-16 16:28:06,982 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5061830
+2025-06-16 16:28:06,986 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5061584
+2025-06-16 16:28:06,991 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5060743
+2025-06-16 16:28:06,996 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5060744
+2025-06-16 16:28:07,000 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5060114
+2025-06-16 16:28:07,003 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5059950
+2025-06-16 16:28:07,007 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5058565
+2025-06-16 16:28:07,010 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5056778
+2025-06-16 16:28:07,014 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5056761
+2025-06-16 16:28:07,017 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5056776
+2025-06-16 16:28:07,022 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5055500
+2025-06-16 16:28:07,024 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5055406
+2025-06-16 16:28:07,026 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5055295
+2025-06-16 16:28:07,030 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5055243
+2025-06-16 16:28:07,032 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5054823
+2025-06-16 16:28:07,036 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5054513
+2025-06-16 16:28:07,039 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5054442
+2025-06-16 16:28:07,043 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5052183
+2025-06-16 16:28:07,046 [INFO] 📂 分類：《證券產業》
+2025-06-16 16:28:18,617 [INFO]   🔎 共找到 82 篇文章
+2025-06-16 16:28:18,617 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076797
+2025-06-16 16:28:18,622 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076760
+2025-06-16 16:28:18,625 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076636
+2025-06-16 16:28:18,629 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076229
+2025-06-16 16:28:18,633 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076419
+2025-06-16 16:28:18,636 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076448
+2025-06-16 16:28:18,640 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076391
+2025-06-16 16:28:18,643 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076382
+2025-06-16 16:28:18,647 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076380
+2025-06-16 16:28:18,650 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076378
+2025-06-16 16:28:18,654 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076369
+2025-06-16 16:28:18,657 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076342
+2025-06-16 16:28:18,661 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076292
+2025-06-16 16:28:18,665 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076266
+2025-06-16 16:28:18,668 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076230
+2025-06-16 16:28:18,672 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076233
+2025-06-16 16:28:18,676 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076190
+2025-06-16 16:28:18,679 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075711
+2025-06-16 16:28:18,682 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075650
+2025-06-16 16:28:18,686 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075561
+2025-06-16 16:28:18,690 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075534
+2025-06-16 16:28:18,693 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075461
+2025-06-16 16:28:18,695 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075035
+2025-06-16 16:28:18,699 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074896
+2025-06-16 16:28:18,702 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074735
+2025-06-16 16:28:18,706 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074753
+2025-06-16 16:28:18,709 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074752
+2025-06-16 16:28:18,713 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074644
+2025-06-16 16:28:18,716 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074583
+2025-06-16 16:28:18,719 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074560
+2025-06-16 16:28:18,723 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074549
+2025-06-16 16:28:18,726 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074553
+2025-06-16 16:28:18,730 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074540
+2025-06-16 16:28:18,733 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074482
+2025-06-16 16:28:18,736 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074379
+2025-06-16 16:28:18,740 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074377
+2025-06-16 16:28:18,743 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074354
+2025-06-16 16:28:18,746 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074362
+2025-06-16 16:28:18,750 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074365
+2025-06-16 16:28:18,753 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074340
+2025-06-16 16:28:18,757 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074028?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:18,760 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076353?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:18,766 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076620?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:18,774 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076098?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:18,784 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076030?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:18,795 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076229
+2025-06-16 16:28:18,806 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076419
+2025-06-16 16:28:18,815 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076448
+2025-06-16 16:28:18,823 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076391
+2025-06-16 16:28:18,833 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076382
+2025-06-16 16:28:18,841 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076380
+2025-06-16 16:28:18,850 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076378
+2025-06-16 16:28:18,860 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076369
+2025-06-16 16:28:18,867 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076342
+2025-06-16 16:28:18,875 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076292
+2025-06-16 16:28:18,883 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076266
+2025-06-16 16:28:18,890 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076230
+2025-06-16 16:28:18,897 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076233
+2025-06-16 16:28:18,905 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076190
+2025-06-16 16:28:18,909 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075711
+2025-06-16 16:28:18,916 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075650
+2025-06-16 16:28:18,923 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075561
+2025-06-16 16:28:18,928 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075534
+2025-06-16 16:28:18,933 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075461
+2025-06-16 16:28:18,942 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5075035
+2025-06-16 16:28:18,945 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074896
+2025-06-16 16:28:18,949 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074735
+2025-06-16 16:28:18,955 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074753
+2025-06-16 16:28:18,959 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074752
+2025-06-16 16:28:18,962 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074644
+2025-06-16 16:28:18,966 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074583
+2025-06-16 16:28:18,970 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074560
+2025-06-16 16:28:18,974 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074549
+2025-06-16 16:28:18,977 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074553
+2025-06-16 16:28:18,980 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074540
+2025-06-16 16:28:18,984 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074482
+2025-06-16 16:28:18,987 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074379
+2025-06-16 16:28:18,991 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074377
+2025-06-16 16:28:18,994 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074354
+2025-06-16 16:28:18,997 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074362
+2025-06-16 16:28:19,001 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074365
+2025-06-16 16:28:19,004 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074340
+2025-06-16 16:28:19,008 [INFO] 📂 分類：《房產資訊》
+2025-06-16 16:28:31,073 [INFO]   🔎 共找到 82 篇文章
+2025-06-16 16:28:31,073 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076704
+2025-06-16 16:28:31,078 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074845
+2025-06-16 16:28:31,083 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5072971
+2025-06-16 16:28:31,087 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5072700
+2025-06-16 16:28:31,090 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5072524
+2025-06-16 16:28:31,094 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5071483
+2025-06-16 16:28:31,097 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5070491
+2025-06-16 16:28:31,100 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5069780
+2025-06-16 16:28:31,104 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5069262
+2025-06-16 16:28:31,107 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5069148
+2025-06-16 16:28:31,111 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5067316
+2025-06-16 16:28:31,114 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5065797
+2025-06-16 16:28:31,118 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5065526
+2025-06-16 16:28:31,121 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5065259
+2025-06-16 16:28:31,125 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5065079
+2025-06-16 16:28:31,128 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5064062
+2025-06-16 16:28:31,132 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5064043
+2025-06-16 16:28:31,135 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5063706
+2025-06-16 16:28:31,139 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062745
+2025-06-16 16:28:31,142 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062097
+2025-06-16 16:28:31,146 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062006
+2025-06-16 16:28:31,150 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5058368
+2025-06-16 16:28:31,153 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5057707
+2025-06-16 16:28:31,157 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5057541
+2025-06-16 16:28:31,160 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5057226
+2025-06-16 16:28:31,164 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5057029
+2025-06-16 16:28:31,167 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5056993
+2025-06-16 16:28:31,171 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5055878
+2025-06-16 16:28:31,174 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5054693
+2025-06-16 16:28:31,178 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5052604
+2025-06-16 16:28:31,181 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5051460
+2025-06-16 16:28:31,185 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5050992
+2025-06-16 16:28:31,188 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5049886
+2025-06-16 16:28:31,192 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5048099
+2025-06-16 16:28:31,195 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5047655
+2025-06-16 16:28:31,199 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5047567
+2025-06-16 16:28:31,202 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5046147
+2025-06-16 16:28:31,206 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5045980
+2025-06-16 16:28:31,209 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5043955
+2025-06-16 16:28:31,212 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5043599
+2025-06-16 16:28:31,216 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074028?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:31,219 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076353?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:31,226 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076620?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:31,233 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076098?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:31,243 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076030?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:31,253 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5072700
+2025-06-16 16:28:31,265 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5072524
+2025-06-16 16:28:31,272 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5071483
+2025-06-16 16:28:31,282 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5070491
+2025-06-16 16:28:31,292 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5069780
+2025-06-16 16:28:31,301 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5069262
+2025-06-16 16:28:31,310 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5069148
+2025-06-16 16:28:31,319 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5067316
+2025-06-16 16:28:31,327 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5065797
+2025-06-16 16:28:31,334 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5065526
+2025-06-16 16:28:31,342 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5065259
+2025-06-16 16:28:31,349 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5065079
+2025-06-16 16:28:31,357 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5064062
+2025-06-16 16:28:31,364 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5064043
+2025-06-16 16:28:31,370 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5063706
+2025-06-16 16:28:31,376 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062745
+2025-06-16 16:28:31,383 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062097
+2025-06-16 16:28:31,388 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5062006
+2025-06-16 16:28:31,394 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5058368
+2025-06-16 16:28:31,400 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5057707
+2025-06-16 16:28:31,404 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5057541
+2025-06-16 16:28:31,410 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5057226
+2025-06-16 16:28:31,415 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5057029
+2025-06-16 16:28:31,418 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5056993
+2025-06-16 16:28:31,422 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5055878
+2025-06-16 16:28:31,425 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5054693
+2025-06-16 16:28:31,429 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5052604
+2025-06-16 16:28:31,432 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5051460
+2025-06-16 16:28:31,436 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5050992
+2025-06-16 16:28:31,439 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5049886
+2025-06-16 16:28:31,443 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5048099
+2025-06-16 16:28:31,446 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5047655
+2025-06-16 16:28:31,449 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5047567
+2025-06-16 16:28:31,453 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5046147
+2025-06-16 16:28:31,456 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5045980
+2025-06-16 16:28:31,460 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5043955
+2025-06-16 16:28:31,463 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5043599
+2025-06-16 16:28:31,466 [INFO] 📂 分類：《財經週報》
+2025-06-16 16:28:42,991 [INFO]   🔎 共找到 34 篇文章
+2025-06-16 16:28:42,991 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711825
+2025-06-16 16:28:42,996 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711826
+2025-06-16 16:28:43,000 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711827
+2025-06-16 16:28:43,004 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711828
+2025-06-16 16:28:43,007 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711829
+2025-06-16 16:28:43,011 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711830
+2025-06-16 16:28:43,014 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711831
+2025-06-16 16:28:43,018 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711832
+2025-06-16 16:28:43,022 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711833
+2025-06-16 16:28:43,026 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711834
+2025-06-16 16:28:43,028 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711835
+2025-06-16 16:28:43,032 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711836
+2025-06-16 16:28:43,035 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711837
+2025-06-16 16:28:43,039 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711838
+2025-06-16 16:28:43,042 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711839
+2025-06-16 16:28:43,045 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711840
+2025-06-16 16:28:43,049 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5074028?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:43,053 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076353?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:43,059 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076620?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:43,067 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076098?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:43,076 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/breakingnews/5076030?utm_campaign=STARK_business_DQN&utm_source=BUSINESS&utm_medium=hotnews_right
+2025-06-16 16:28:43,091 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711828
+2025-06-16 16:28:43,102 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711829
+2025-06-16 16:28:43,110 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711830
+2025-06-16 16:28:43,119 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711831
+2025-06-16 16:28:43,130 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711832
+2025-06-16 16:28:43,138 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711833
+2025-06-16 16:28:43,147 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711834
+2025-06-16 16:28:43,156 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711835
+2025-06-16 16:28:43,163 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711836
+2025-06-16 16:28:43,172 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711837
+2025-06-16 16:28:43,180 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711838
+2025-06-16 16:28:43,187 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711839
+2025-06-16 16:28:43,193 [INFO]    ⏩ 已處理過：https://ec.ltn.com.tw/article/paper/1711840
+2025-06-16 16:28:43,201 [INFO] ✅ 完成，自由時報共儲存 1 篇文章
+2025-06-16 16:28:43,206 [INFO] 📡 擷取：自由時報_國際
+2025-06-16 16:28:54,612 [INFO] 🌍 國際新聞共找到 29 篇文章
+2025-06-16 16:28:54,612 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076621
+2025-06-16 16:28:54,631 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076518
+2025-06-16 16:28:54,636 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076484
+2025-06-16 16:28:54,642 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076505
+2025-06-16 16:28:54,646 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076471
+2025-06-16 16:28:54,650 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076379
+2025-06-16 16:28:54,655 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076392
+2025-06-16 16:28:54,658 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076418
+2025-06-16 16:28:54,661 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076442
+2025-06-16 16:28:54,664 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076393
+2025-06-16 16:28:54,666 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076318
+2025-06-16 16:28:54,670 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076301
+2025-06-16 16:28:54,673 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076310
+2025-06-16 16:28:54,676 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076339
+2025-06-16 16:28:54,680 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076312
+2025-06-16 16:28:54,683 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076305
+2025-06-16 16:28:54,686 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076248
+2025-06-16 16:28:54,689 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076273
+2025-06-16 16:28:54,692 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076214
+2025-06-16 16:28:54,695 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076276
+2025-06-16 16:28:54,697 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076244
+2025-06-16 16:28:54,700 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076240
+2025-06-16 16:28:54,702 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076209
+2025-06-16 16:28:54,705 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076218
+2025-06-16 16:28:54,708 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076168
+2025-06-16 16:28:54,711 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076193
+2025-06-16 16:28:54,713 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076183
+2025-06-16 16:28:54,716 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076175
+2025-06-16 16:28:54,719 [INFO]    ⏩ 已處理過：https://news.ltn.com.tw/news/world/breakingnews/5076174
+2025-06-16 16:28:54,721 [INFO] ✅ 完成，自由時報世界新聞共儲存 0 篇文章
+2025-06-16 16:28:54,724 [INFO] ✅ 擷取完成
+
+2025-06-16 16:28:54,881 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2024-04-29\2024-04-29_聯合報_EPU檢查結果.xlsx
+2025-06-16 16:28:54,924 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-03-28\2025-03-28_聯合報_EPU檢查結果.xlsx
+2025-06-16 16:28:54,968 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-04-09\2025-04-09_聯合報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,010 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-02\2025-06-02_聯合報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,044 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-09\2025-06-09_聯合報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,090 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-10\2025-06-10_聯合報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,130 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-11\2025-06-11_聯合報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,175 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-12\2025-06-12_聯合報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,248 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-13\2025-06-13_聯合報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,329 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-14\2025-06-14_聯合報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,423 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-15\2025-06-15_聯合報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,538 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-16\2025-06-16_聯合報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,584 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\0001-11-30\0001-11-30_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,630 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-01\2025-06-01_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,673 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-02\2025-06-02_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,716 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-03\2025-06-03_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,757 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-04\2025-06-04_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,800 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-05\2025-06-05_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,841 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-06\2025-06-06_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,884 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-07\2025-06-07_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,933 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-09\2025-06-09_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:55,979 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-10\2025-06-10_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:56,024 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-11\2025-06-11_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:56,087 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-12\2025-06-12_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:56,166 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-13\2025-06-13_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:56,227 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-14\2025-06-14_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:56,296 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-15\2025-06-15_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:56,377 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-16\2025-06-16_自由時報_EPU檢查結果.xlsx
+2025-06-16 16:28:56,442 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-13\2025-06-13_中時_EPU檢查結果.xlsx
+2025-06-16 16:28:56,523 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-14\2025-06-14_中時_EPU檢查結果.xlsx
+2025-06-16 16:28:56,594 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-15\2025-06-15_中時_EPU檢查結果.xlsx
+2025-06-16 16:28:56,678 [INFO] 📁 已儲存至：C:\Users\lolee\Desktop\studios\爬蟲\dist\整合結果\EPU匯出結果\2025-06-16\2025-06-16_中時_EPU檢查結果.xlsx
+2025-06-16 16:28:57,029 [INFO] 📊 EPU匯出結果 匯出 Excel 完成（共 0 週）
+2025-06-16 16:28:57,030 [INFO] 📊 monthly_archives 匯出 Excel 完成（共 0 週）
+2025-06-16 16:28:59,321 [INFO] 📊 中時 匯出 Excel 完成（共 2 週）
+2025-06-16 16:29:01,127 [INFO] 📊 聯合國際 匯出 Excel 完成（共 5 週）
+2025-06-16 16:29:02,231 [INFO] 📊 聯合產經 匯出 Excel 完成（共 4 週）
+2025-06-16 16:29:02,823 [INFO] 📊 自由時報_國際 匯出 Excel 完成（共 2 週）
+2025-06-16 16:29:05,036 [INFO] 📊 自由時報_財經 匯出 Excel 完成（共 5 週）
+2025-06-16 16:29:05,051 [WARNING] ✘ 沒有找到任何 2025-05 的檔案可以壓縮
+2025-06-16 16:29:05,053 [INFO] ✅ 完成：2025-06-16 16:28:54
+2025-06-16 16:29:05,058 [INFO] 🕐 下次：2025-06-16 17:28:54
+2025-06-16 16:29:05,165 [INFO] 
+📋【擷取總結報告】
+2025-06-16 16:29:05,166 [INFO] 📅 日期：2025-06-16
+2025-06-16 16:29:05,184 [INFO] 📰 掃描來源：中時, 聯合國際, 聯合產經, 自由時報_國際, 自由時報_財經
+2025-06-16 16:29:05,201 [INFO] 
+   └ 中時：Excel實際處理 138，符合 EPU：51
+2025-06-16 16:29:05,219 [INFO]        └ 中時：txt原始數 138
+2025-06-16 16:29:05,225 [INFO] 
+   └ 聯合報：Excel實際處理 177，符合 EPU：35
+2025-06-16 16:29:05,228 [INFO]        └ 聯合國際：txt原始數 88
+2025-06-16 16:29:05,231 [INFO]        └ 聯合產經：txt原始數 89
+2025-06-16 16:29:05,238 [INFO] 
+   └ 自由時報：Excel實際處理 120，符合 EPU：25
+2025-06-16 16:29:05,242 [INFO]        └ 自由時報_國際：txt原始數 46
+2025-06-16 16:29:05,247 [INFO]        └ 自由時報_財經：txt原始數 74
+2025-06-16 16:29:05,257 [INFO] 
+📦 今日 txt 總數：435 篇
+2025-06-16 16:29:05,259 [INFO] 📄 Excel 實際處理數：435 篇，符合 EPU：111 篇
+2025-06-16 16:29:05,274 [INFO] 📈 今日 EPU 指數：160.49

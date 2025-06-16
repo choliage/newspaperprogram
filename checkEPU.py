@@ -1,6 +1,7 @@
 import os
 import logging
 import re
+import json
 from collections import defaultdict
 from datetime import datetime
 import pandas as pd
@@ -15,6 +16,14 @@ P_TERMS = ["CBAM", "CPI", "CPTPP", "Fed", "FED", "IMF", "WTO", "人行", "中央
 
 U_TERMS = ["人口高齡化", "人心惶惶", "大失所望", "大幅衰退", "干擾", "不友善勢力", "不可投資", "不平靜", "不如預期", "不安", "不明", "不振", "不景氣", "不會太好", "不確定", "不確定因素", "不確定性", "不確定風險", "不適合投資", "不穩定", "中共封控威脅", "中東地緣政治", "中東局勢", "中東緊張局勢", "中東戰火", "中東變局", "內需低迷", "內需消費低迷", "反效果", "反彈", "反覆無常", "少子女化", "少子化", "少子化危機", "引發外界質疑", "引進移工", "充滿變數", "加速逃離", "失去信心", "失望", "失業", "失業率居高", "失業率居高不下", "失業率高", "失業率飆高", "左右為難", "市況慘淡", "市場不安", "市場失望", "市場風險", "市場震盪", "打擊消費者信心", "民眾抗爭", "由升轉貶", "示警", "全球貿易壁壘", "全球衝突", "全球競爭加劇", "再審議", "地緣政治", "地緣政治崛起", "地緣政治緊張", "成本上揚", "成本挑戰", "成長放緩", "成長率放緩", "有待觀察", "考驗", "低於預期", "低迷不振", "冷戰", "妨礙", "局勢不安", "局勢緊張", "局勢緊繃", "技術人才短缺", "投資人疑慮", "抗議", "攻防", "材料供不應求", "沉重負擔", "供不應求", "供應鏈風險", "受阻", "尚未有進一步的安排", "尚待觀察", "房市正崩盤", "房市泡沫", "房市信心大受衝擊", "房市崩跌", "房市崩盤與經濟前景不確定", "房地產危機持續延燒", "房貸不降反增", "房貸緊縮", "房價持續崩跌", "放緩", "油價下滑", "治安不佳", "波動", "金龍海嘯", "阻撓", "俄烏戰爭", "信心低迷", "信心低靡", "信心受挫", "削弱熱情", "前景不確定", "威脅升溫", "威脅性", "客戶需求的變化", "封控", "待改進", "很難經營", "急凍", "持續惡化", "政治干擾", "政治考量備受關注", "政治風險", "政治紛擾", "政治動盪", "政策不確定性", "政策反覆無常", "洩密疑慮", "看壞", "美中科技紛爭", "美中貿易戰", "美東罷工", "美國大選恐將翻盤", "美國大選逼近", "美國總統大選", "苦戰", "訂單大幅減少", "負面效應", "負面影響", "重挫", "風險上升", "倒閉", "恐怕", "恐將翻盤", "效果難料", "消費力道降低", "消費力道將會降低", "消費低迷", "消極", "疲軟", "缺工", "缺料狀況恐延續到明年", "缺電", "能源與環保壓力", "衰退", "財務困難", "動向不明", "動盪", "國內主要仲介9月房市交易量大幅衰退", "國民黨堅決反對政府補貼台電2000億元預算", "國安危機", "國安新風險", "將改變就業市場供需", "崩盤", "推升調漲票價壓力", "推升壓力", "混亂", "產能過剩", "產業發展痛點", "通膨", "通膨壓力", "通縮", "通縮預期", "通縮壓力", "造成影響", "陷入通縮", "勞動部反對合併案", "幅度大", "復甦無望", "悲觀", "惡化", "惡性循環", "提案擱置", "最沉重的一季", "無法兌現", "無法達成共識", "短收", "窘境", "裁員", "貿易緊張", "貿易緊張升溫", "貿易緊張局勢", "貿易摩擦", "貿易摩擦", "貿易衝突", "跌幅擴大", "進口來源單一而降低了其韌性", "須持續觀察", "須留意", "匯率震盪", "意見不一", "感到不耐", "會把產業搞掉", "經濟不振", "經濟未有起色", "經濟低迷", "經濟持續低迷", "落空", "解僱", "解僱全體員工", "資本逃離", "資料短缺", "跳票", "違反美國出口管制", "違反國際貿易規則", "實務脫節", "弊案", "疑慮", "疑慮升溫", "算力有限", "綠色通膨", "緊張", "緊繃", "障礙", "需求疲軟", "需求減弱", "增加不著陸的可能性", "審慎保守", "審慎權衡", "影響房市", "影響信心", "影響員工失業", "影響產能", "憂心", "憂慮", "暴跌", "暴漲暴跌", "潛在風險", "罷工", "衝擊房市", "衝擊變數", "戰爭風險", "擋總預算", "擔憂", "擔憂升溫", "融資不順", "選前風險意識升高", "選情失利", "駭客攻擊", "壓倒性看壞", "應謹慎避險", "環境複雜嚴峻", "糟糕", "縮減產能", "縮減規模", "總統大選", "虧損加劇", "趨勢往下", "趨緊縮", "避險情緒升高", "隱憂", "謹慎情緒", "轉為緊縮", "雙方仍未達成協議", "曝險創下新高", "邊緣化", "關稅反制", "關稅翻倍", "難以扭轉", "難題", "嚴重的影響", "嚴重削弱", "嚴重衝擊", "競爭力下降", "繼續下跌", "續崩", "變化莫測", "觀望氛圍", "觀望氣氛", "陷入困境", "高額關稅", "難以預測", "需要長期觀察"]
 
+CACHE_FILENAME = ".epu_cache.json"
+
+def limit_cache_size(cache, max_entries=50000):
+    if len(cache) <= max_entries:
+        return cache
+    print(f"⚠️ 快取達 {len(cache)} 筆，自動保留最近 {max_entries} 筆")
+    sorted_items = sorted(cache.items(), key=lambda x: x[1]['mtime'], reverse=True)
+    return dict(sorted_items[:max_entries])
 
 def find_matched_keywords(text, keywords):
     return [kw for kw in keywords if kw in text]
@@ -30,10 +39,24 @@ def extract_date_from_filename(fname):
     match = re.match(r"(\d{4}-\d{2}-\d{2})", fname)
     return match.group(1) if match else None
 
+def load_cache(cache_path):
+    if cache_path.exists():
+        try:
+            with open(cache_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return {}
+    return {}
+
+def save_cache(cache_path, cache):
+    with open(cache_path, "w", encoding="utf-8") as f:
+        json.dump(cache, f, ensure_ascii=False, indent=2)
+
 def run_check(base_dir):
     base_dir = Path(base_dir)
+    cache_path = base_dir / CACHE_FILENAME
+    cache = load_cache(cache_path)
 
-    # ✅ 報社合併對照表
     merged_source_map = {
         "聯合國際": "聯合報",
         "聯合產經": "聯合報",
@@ -41,9 +64,8 @@ def run_check(base_dir):
         "自由時報_國際": "自由時報",
     }
 
-    # 結構：{報社: {日期: [文章條目]}}
-    grouped_data = defaultdict(lambda: defaultdict(list))
-
+    # ✅ 收集新處理的資料
+    updated_grouped = defaultdict(lambda: defaultdict(list))
     for source_dir in base_dir.iterdir():
         if not source_dir.is_dir():
             continue
@@ -54,24 +76,59 @@ def run_check(base_dir):
         unified_name = merged_source_map.get(folder_name, folder_name)
 
         for file in source_dir.glob("*.txt"):
+            rel_path = f"{folder_name}/{file.name}"
+            stat = file.stat()
+            mtime = round(stat.st_mtime, 2)
+
             date_str = extract_date_from_filename(file.name)
             if not date_str:
                 continue
+
+            # ⚡ 若未變動，跳過分析，但留快取資料後續會補進輸出
+            if rel_path in cache and cache[rel_path]["mtime"] == mtime:
+                continue
+
             with open(file, "r", encoding="utf-8", errors="ignore") as f:
                 text = f.read()
                 is_epu, matched_e, matched_p, matched_u = check_epu(text)
-                grouped_data[unified_name][date_str].append({
-                    "source": folder_name,
-                    "filename": file.name,
-                    "is_epu": is_epu,
-                    "matched_e": "、".join(matched_e),
-                    "matched_p": "、".join(matched_p),
-                    "matched_u": "、".join(matched_u),
-                    })
-                
 
-    # ✅ 每家報社每個日期獨立輸出 Excel 統計
-    for paper_name, date_dict in grouped_data.items():
+            updated_grouped[unified_name][date_str].append({
+                "source": folder_name,
+                "filename": file.name,
+                "is_epu": is_epu,
+                "matched_e": "、".join(matched_e),
+                "matched_p": "、".join(matched_p),
+                "matched_u": "、".join(matched_u),
+            })
+
+            cache[rel_path] = {
+                "mtime": mtime,
+                "is_epu": is_epu,
+                "matched_e": matched_e,
+                "matched_p": matched_p,
+                "matched_u": matched_u
+            }
+
+    # ✅ 加入快取中未被更新的資料
+    for rel_path, data in cache.items():
+        folder, fname = rel_path.split("/", 1)
+        unified_name = merged_source_map.get(folder, folder)
+        date_str = extract_date_from_filename(fname)
+        if not date_str:
+            continue
+        if any(entry["filename"] == fname for entry in updated_grouped[unified_name][date_str]):
+            continue  # 已更新的就跳過
+        updated_grouped[unified_name][date_str].append({
+            "source": folder,
+            "filename": fname,
+            "is_epu": data["is_epu"],
+            "matched_e": "、".join(data["matched_e"]),
+            "matched_p": "、".join(data["matched_p"]),
+            "matched_u": "、".join(data["matched_u"]),
+        })
+
+    # ✅ 輸出每一天每家報紙的 Excel 結果
+    for paper_name, date_dict in updated_grouped.items():
         for date, entries in sorted(date_dict.items()):
             rows = []
             epu_yes = 0
@@ -79,18 +136,17 @@ def run_check(base_dir):
                 if entry["is_epu"]:
                     epu_yes += 1
                 rows.append({
-                "日期": date,
-                "來源": entry["source"],
-                "檔名": entry["filename"],
-                "是否符合 EPU": "✔ 是" if entry["is_epu"] else "✘ 否",
-                "E關鍵字": entry["matched_e"],
-                "P關鍵字": entry["matched_p"],
-                "U關鍵字": entry["matched_u"]
-            })
+                    "日期": date,
+                    "來源": entry["source"],
+                    "檔名": entry["filename"],
+                    "是否符合 EPU": "✔ 是" if entry["is_epu"] else "✘ 否",
+                    "E關鍵字": entry["matched_e"],
+                    "P關鍵字": entry["matched_p"],
+                    "U關鍵字": entry["matched_u"]
+                })
             epu_no = len(entries) - epu_yes
             ratio = round(epu_yes / len(entries) * 100, 2) if entries else 0
 
-            # ✅ 儲存位置：整合結果/EPU匯出結果/YYYY-MM-DD/
             output_root = base_dir / "EPU匯出結果" / date
             output_root.mkdir(parents=True, exist_ok=True)
             filename = f"{date}_{paper_name}_EPU檢查結果.xlsx"
@@ -99,7 +155,6 @@ def run_check(base_dir):
             df = pd.DataFrame(rows)
             df.to_excel(out_path, index=False)
 
-            # 統計摘要與圖表
             wb = load_workbook(out_path)
             ws = wb.active
             summary_row = len(rows) + 3
@@ -121,5 +176,46 @@ def run_check(base_dir):
 
             wb.save(out_path)
             logging.info(f"📁 已儲存至：{out_path}")
+    cache = limit_cache_size(cache)
+    save_cache(cache_path, cache)
+    
+
+def generate_epu_index_report(base_dir):
+    base_dir = Path(base_dir)
+    report = []
+
+    daily_dir = base_dir / "EPU匯出結果"
+    for day_folder in daily_dir.iterdir():
+        if not day_folder.is_dir():
+            continue
+        total = 0
+        epu = 0
+        for file in day_folder.glob("*_EPU檢查結果.xlsx"):
+            df = pd.read_excel(file)
+            total += len(df)
+            epu += (df["是否符合 EPU"] == "✔ 是").sum()
+        if total == 0:
+            continue
+        ratio = round(epu / total * 100, 2)
+        report.append({
+            "日期": day_folder.name,
+            "總新聞數": total,
+            "EPU新聞數": epu,
+            "EPU比例 (%)": ratio
+        })
+
+    index_df = pd.DataFrame(sorted(report, key=lambda x: x["日期"]))
+    if index_df.empty:
+        print("❗ 沒有找到任何 EPU 統計資料。")
+        return
+
+    avg_ratio = index_df["EPU比例 (%)"].mean()
+    index_df["正規化指數"] = index_df["EPU比例 (%)"].apply(lambda x: round((x / avg_ratio) * 100, 2) if avg_ratio > 0 else 0)
+
+    out_path = base_dir / "EPU匯出結果" / "EPU_每日指數.xlsx"
+    index_df.to_excel(out_path, index=False)
+    print(f"📈 已建立每日 EPU 指數報表：{out_path}")
+
 if __name__ == "__main__":
     run_check("整合結果")
+    generate_epu_index_report("整合結果")

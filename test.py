@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from newspaper import Article
+
 #註:這是原本手寫的第一個版本
 url = "https://udn.com/news/cate/2/7225"
 headers = {'User-Agent': 'Mozilla/5.0'}
