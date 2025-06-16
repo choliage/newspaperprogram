@@ -40,4 +40,4 @@ GUI按鈕可隨時按下檢查
 >現在是每個月底會自動打包上個月的新聞進去一個zip，也做了如果不小心掃到上個月會自動合併的機制。另外，也針對了生成EPU那邊做了防未來新聞太多造成的效能瓶頸(還在改)。但優化跟抓bug這種事情其實蠻隨緣的，很看情況，情況對了什麼問題都能抓出來。
 
 
-
+>>>>~~pyinstaller --onefile --windowed --icon=fakemimi.ico --name PoeSystem-vers1.0  --add-data "C:/Users/lolee/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0/LocalCache/local-packages/Python313/site-packages/newspaper/resources;newspaper/resources" main.py~~
