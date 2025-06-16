@@ -1,4 +1,5 @@
 import os
+import logging
 import re
 import time
 from datetime import datetime
@@ -71,7 +72,7 @@ def fetch_ct_articles_and_save(index_url, output_dir, source_label="中時"):
     driver.quit()
 
     stories = soup.find_all('div', class_='cropper')
-    print(f"🔍 [中時] 找到 {len(stories)} 則文章")
+    logging.info(f"🔍 [中時] 找到 {len(stories)} 則文章")
 
     for i, story in enumerate(stories, 1):
         
@@ -84,7 +85,7 @@ def fetch_ct_articles_and_save(index_url, output_dir, source_label="中時"):
         full_url = "https://www.chinatimes.com" + raw_link if raw_link.startswith("/") else raw_link
         
         if normalize_url(full_url) in normalized_done_urls or normalize_url(a['href'].strip()) in normalized_done_urls:
-            print(f"   ⏩ 已處理過（URL 重複或跳轉網址）")
+            logging.info(f"   ⏩ 已處理過（URL 重複或跳轉網址）")
             continue
 
         domain = urlparse(full_url).netloc
@@ -92,7 +93,7 @@ def fetch_ct_articles_and_save(index_url, output_dir, source_label="中時"):
             continue
 
         title = a.get('title', '').strip() or a.text.strip()
-        print(f"  {i:02d}. 嘗試擷取文章：{title}")
+        logging.info(f"  {i:02d}. 嘗試擷取文章：{title}")
 
         try:
             driver = create_driver()
@@ -118,13 +119,13 @@ def fetch_ct_articles_and_save(index_url, output_dir, source_label="中時"):
             
             append_done_url(done_file, full_url)
 
-            print(f"   ✅ 已儲存：{filename}")
+            logging.info(f"   ✅ 已儲存：{filename}")
         except Exception as e:
-            print(f"   ❌ 擷取失敗：{e}")
+            logging.error(f"   ❌ 擷取失敗：{e}")
 
 
 def fetch_ct_articles_auto(index_url, output_dir, source_label="中時", max_pages=10):
-    print(f"🌀 自動擷取中時頁面：從 {index_url} 開始，最多 {max_pages} 頁")
+    logging.info(f"🌀 自動擷取中時頁面：從 {index_url} 開始，最多 {max_pages} 頁")
 
     base_url = "https://www.chinatimes.com/money/total?page="
     subdir = os.path.join(output_dir, source_label)
@@ -135,7 +136,7 @@ def fetch_ct_articles_auto(index_url, output_dir, source_label="中時", max_pag
 
     for page in range(1, max_pages + 1):
         url = f"{base_url}{page}&chdtv"
-        print(f"\n📄 掃描中時第 {page} 頁：{url}")
+        logging.info(f"\n📄 掃描中時第 {page} 頁：{url}")
 
         driver = create_driver()
         driver.get(url)
@@ -144,7 +145,7 @@ def fetch_ct_articles_auto(index_url, output_dir, source_label="中時", max_pag
         driver.quit()
 
         stories = soup.find_all('div', class_='cropper')
-        print(f"🔍 找到 {len(stories)} 則文章")
+        logging.info(f"🔍 找到 {len(stories)} 則文章")
 
         new_count = 0
 
@@ -164,7 +165,7 @@ def fetch_ct_articles_auto(index_url, output_dir, source_label="中時", max_pag
                 continue
 
             title = a.get('title', '').strip() or a.text.strip()
-            print(f"  {i:02d}. 嘗試擷取：{title}")
+            logging.info(f"  {i:02d}. 嘗試擷取：{title}")
             try:
                 driver = create_driver()
                 driver.get(full_url)
@@ -188,11 +189,11 @@ def fetch_ct_articles_auto(index_url, output_dir, source_label="中時", max_pag
 
                 append_done_url(done_file, full_url)
                 normalized_done_urls.add(normalize_url(full_url))
-                print(f"   ✅ 已儲存：{filename}")
+                logging.info(f"   ✅ 已儲存：{filename}")
                 new_count += 1
             except Exception as e:
-                print(f"   ❌ 擷取失敗：{e}")
+                logging.error(f"   ❌ 擷取失敗：{e}")
 
         if new_count == 0:
-            print("⚠️ 無新文章，提早結束中時擷取")
+            logging.warning(f"⚠️ 無新文章，提早結束中時擷取")
             break

@@ -3,16 +3,19 @@ import time
 import pandas as pd
 import re
 import random
+import logging
 import customtkinter as ctk
 import io
 import sys
 import threading
 import subprocess
+from log import setup_logging_with_gui, GuiLogHandler
 from scraper_udn import fetch_udn_articles_and_save
-from scraper_ltn import fetch_ltn_articles_and_save
+from scraper_ltn import fetch_ltn_articles_and_save, fetch_ltn_world_articles_and_save
 from scraper_ct import fetch_ct_articles_auto
 from checkEPU import run_check
 from datetime import datetime, timedelta
+from monthly_cleaner import archive_last_month
 
 is_animating = False
 
@@ -38,14 +41,21 @@ TARGETS = [
         'param_name': 'index_url'
     },
     {
-    'label': '自由時報',
-    'url': 'https://ec.ltn.com.tw/',
-    'fetch_and_save': fetch_ltn_articles_and_save,
-    'param_name': 'index_url'
+        'label': '自由時報_財經',
+        'url': 'https://ec.ltn.com.tw/',
+        'fetch_and_save': fetch_ltn_articles_and_save,
+        'param_name': 'index_url'
+    },
+    {
+        'label': '自由時報_國際',
+        'url': 'https://news.ltn.com.tw/list/breakingnews/world',
+        'fetch_and_save': fetch_ltn_world_articles_and_save,
+        'param_name': 'index_url'
     }
 
 
 ]
+
 def set_default_font():
     from tkinter import font as tkfont
     default_font = tkfont.nametofont("TkDefaultFont")
@@ -77,10 +87,10 @@ def update_countdown_loop():
     threading.Thread(target=loop, daemon=True).start()
 
 def scan_once():
-    print(f"\n⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - 開始擷取")
-    print(f"\n📁 儲存資料夾：", BASE_DIR)
+    logging.info(f"\n⏰ {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - 開始擷取")
+    logging.info("📁 儲存資料夾：%s", BASE_DIR)
     for target in TARGETS:
-        print(f"📡 擷取：{target['label']}")
+        logging.info(f"📡 擷取：{target['label']}")
         try:
             kwargs = {
                 target['param_name']: target['url'],
@@ -89,8 +99,8 @@ def scan_once():
             }
             target['fetch_and_save'](**kwargs)
         except Exception as e:
-            print(f"❌ 擷取失敗：{target['label']}，原因：{e}")
-    print("✅ 擷取完成\n")
+            logging.error(f"❌ 擷取失敗：{target['label']}，原因：{e}")
+    logging.info(f"✅ 擷取完成\n")
     # 🔽 自動產出 Excel：每週為單位彙整新聞標題、日期、網址
 
 def open_result_folder():
@@ -148,7 +158,7 @@ def postprocess_to_excel(output_root_dir):
                 out_path = os.path.join(output_dir, f"{week_key}.xlsx")
                 df.to_excel(out_path, index=False)
 
-            print(f"📊 {source} 匯出 Excel 完成（共 {len(by_week)} 週）")
+            logging.info(f"📊 {source} 匯出 Excel 完成（共 {len(by_week)} 週）")
         
         
 
@@ -166,16 +176,18 @@ if __name__ == "__main__":
     button_frame = ctk.CTkFrame(app)
     button_frame.pack(side="bottom", fill="x", pady=(10, 10))
     
+    
+
     def run_once_now():
         def task():
             global is_animating
             is_animating = True
             animate_status_label("掃描中", "🔴")
-            print(f"\n🧨【手動觸發】開始於：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            logging.info(f"🧨【手動觸發】開始於：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
             scan_once()
             is_animating = False
             update_status("完成", "🟢")
-            print(f"\n✅ 掃描完成：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            logging.info(f"✅ 掃描完成：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         threading.Thread(target=task).start()
 
     run_once_button = ctk.CTkButton(button_frame, text="▶ 立即重新執行爬蟲", command=run_once_now)
@@ -193,10 +205,10 @@ if __name__ == "__main__":
         text="▶ EXCEL統計資料",
         command=lambda: postprocess_to_excel(BASE_DIR)
     )
-    run_once_button3.pack(side="left", padx=(10))
+    run_once_button3.pack(side="left", padx=(10,10))
 
     open_button = ctk.CTkButton(button_frame, text="📂 開啟整合資料夾", command=open_result_folder)
-    open_button.pack(pady=5)
+    open_button.pack(side="right",padx=(10,10))
 
     app.geometry("800x500")
     app.title("P.O.E - Precision,Observe,Exact. Ver.1.0.0")
@@ -211,6 +223,8 @@ if __name__ == "__main__":
     # 日誌區
     log_box = ctk.CTkTextbox(app, wrap="word")
     log_box.pack(padx=20, pady=(0, 20), fill="both", expand=True)
+
+    setup_logging_with_gui(log_box)
 
     # 將 stdout 導入 GUI
     class TextRedirector(io.TextIOBase):
@@ -227,11 +241,11 @@ if __name__ == "__main__":
 
     # 執行原始 while True
     def background_task():
-        print("🔁 每小時新聞自動擷取啟動中...") 
+        logging.info(f"🔁 每小時新聞自動擷取啟動中...") 
         while True:
             start_time = datetime.now()
             update_status("執行中", "🔴")
-            print(f"\n⏰ 本輪開始時間：{start_time.strftime('%Y-%m-%d %H:%M:%S')}")
+            logging.info(f"\n⏰ 本輪開始時間：{start_time.strftime('%Y-%m-%d %H:%M:%S')}")
             global is_animating
             is_animating = True
             animate_status_label("掃描中", "🔴")
@@ -242,10 +256,11 @@ if __name__ == "__main__":
             next_run = end_time + timedelta(hours=1)
             app.next_run_time = next_run
             
-            run_check(BASE_DIR)
+            run_check(BASE_DIR) 
             postprocess_to_excel(BASE_DIR)
-            print(f"✅ 完成：{end_time.strftime('%Y-%m-%d %H:%M:%S')}")
-            print(f"🕐 下次：{next_run.strftime('%Y-%m-%d %H:%M:%S')}")
+            archive_last_month()
+            logging.info(f"✅ 完成：{end_time.strftime('%Y-%m-%d %H:%M:%S')}")
+            logging.info(f"🕐 下次：{next_run.strftime('%Y-%m-%d %H:%M:%S')}")
             print(random.choice([
                 "🔹 P.O.E. 系統完美執行",
                 "🔹 Precision. Observe. Exact. 已經完成了P.O.E.任務",
