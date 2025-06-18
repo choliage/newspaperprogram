@@ -117,6 +117,7 @@ def fetch_ltn_world_articles_and_save(index_url, output_dir, source_label="自�
                 f.write(f"連結: {full_url}\n\n")
                 f.write(article.text)
 
+            normalized_done_urls.add(norm_url)
             append_done_url(done_file, full_url)
             logging.info(f"   ✅ 儲存成功：{filename}")
             total_articles += 1
@@ -204,6 +205,7 @@ def fetch_ltn_articles_and_save(index_url, output_dir, source_label="自由時�
                     f.write(f"連結: {full_url}\n\n")
                     f.write(article.text)
 
+                normalized_done_urls.add(norm_url)
                 append_done_url(done_file, full_url)
                 logging.info(f"   ✅ 儲存成功：{filename}")
 
